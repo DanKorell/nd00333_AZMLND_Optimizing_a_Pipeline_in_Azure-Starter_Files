@@ -39,6 +39,7 @@ def clean_data(data):
 
 def main():
     # Add arguments to script
+    # These are the parameters to be passed to the script
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--C', type=float, default=1.0, help="Inverse of regularization strength. Smaller values cause stronger regularization")
@@ -48,20 +49,21 @@ def main():
 
     run = Run.get_context()
 
+    # Use the parameters passed to the script
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
 
-    # TODO: Create TabularDataset using TabularDatasetFactory
+    # DW: Create TabularDataset using TabularDatasetFactory
     # Data is located at:
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-
-    ds = ### YOUR CODE HERE ###
+    dsurl = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+    ds = TabularDatasetFactory.from_delimited_files(dsurl)
     
     x, y = clean_data(ds)
 
-    # TODO: Split data into train and test sets.
-
-    ### YOUR CODE HERE ###a
+    # DW: Split data into train and test sets.
+    # A random state is used for reproducibility
+    x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42)
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
