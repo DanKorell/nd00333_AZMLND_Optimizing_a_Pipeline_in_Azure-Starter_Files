@@ -14579,9 +14579,31 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Elements from the Azure ML sample Jupyter Notebook below are used:<br>
+<h2 id="Optimizing-a-Pipeline-in-Azure---Daniel-Webb---20th-September-2022">Optimizing a Pipeline in Azure - Daniel Webb - 20th September 2022<a class="anchor-link" href="#Optimizing-a-Pipeline-in-Azure---Daniel-Webb---20th-September-2022">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Note: Code from the Azure ML sample Jupyter Notebook below are used:<br>
 <code>Samples\1.43.0\how-to-use-azureml\ml-frameworks\keras\train-hyperparameter-tune-deploy-with-keras\train-hyperparameter-tune-deploy-with-keras.ipynb</code></p>
 
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Set-up-workspace">Set up workspace<a class="anchor-link" href="#Set-up-workspace">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14590,7 +14612,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.core</span> <span class="kn">import</span> <span class="n">Workspace</span><span class="p">,</span> <span class="n">Experiment</span>
@@ -14625,10 +14647,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Workspace name: quick-starts-ws-207932
+<pre>Workspace name: quick-starts-ws-208099
 Azure region: southcentralus
-Subscription id: 9a7511b8-150f-4a58-8528-3e7d50216c31
-Resource group: aml-quickstarts-207932
+Subscription id: cdbe0b43-92a0-4715-838a-f2648cc7ad21
+Resource group: aml-quickstarts-208099
 </pre>
 </div>
 </div>
@@ -14637,12 +14659,23 @@ Resource group: aml-quickstarts-207932
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Set-up-compute-cluster">Set up compute cluster<a class="anchor-link" href="#Set-up-compute-cluster">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.core.compute</span> <span class="kn">import</span> <span class="n">ComputeTarget</span><span class="p">,</span> <span class="n">AmlCompute</span>
@@ -14685,7 +14718,8 @@ Resource group: aml-quickstarts-207932
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Found existing cluster, use it.
+<pre>InProgress..
+SucceededProvisioning operation finished, operation &#34;Succeeded&#34;
 Succeeded
 AmlCompute wait for completion finished
 
@@ -14698,12 +14732,23 @@ Minimum number of nodes requested have been provisioned
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Hyperdrive-run-of-the-logistic-regression-model-in-train.py">Hyperdrive run of the logistic regression model in train.py<a class="anchor-link" href="#Hyperdrive-run-of-the-logistic-regression-model-in-train.py">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.widgets</span> <span class="kn">import</span> <span class="n">RunDetails</span>
@@ -14719,7 +14764,7 @@ Minimum number of nodes requested have been provisioned
 <span class="c1"># DW: Specify parameter sampler</span>
 <span class="n">ps</span> <span class="o">=</span> <span class="n">RandomParameterSampling</span><span class="p">({</span>
     <span class="s2">"--C"</span><span class="p">:</span> <span class="n">uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="c1"># Inverse of regularization strength</span>
-    <span class="s2">"--max_iter"</span><span class="p">:</span> <span class="n">choice</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># Maximum number of iterations to converge</span>
+    <span class="s2">"--max_iter"</span><span class="p">:</span> <span class="n">choice</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># Maximum number of iterations to converge</span>
     <span class="p">})</span>
 
 <span class="c1"># DW: Specify a Termination Policy (for Early Stopping)</span>
@@ -14757,7 +14802,7 @@ Minimum number of nodes requested have been provisioned
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Submit your hyperdrive run to the experiment and show run details with the widget.</span>
@@ -14811,70 +14856,80 @@ Minimum number of nodes requested have been provisioned
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>RunId: HD_76473968-7195-4c13-9bf4-0939541d5052
-Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid=/subscriptions/9a7511b8-150f-4a58-8528-3e7d50216c31/resourcegroups/aml-quickstarts-207932/workspaces/quick-starts-ws-207932&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
+<pre>RunId: HD_3fea831a-227a-46e6-b6f1-a0851eed65b8
+Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid=/subscriptions/cdbe0b43-92a0-4715-838a-f2648cc7ad21/resourcegroups/aml-quickstarts-208099/workspaces/quick-starts-ws-208099&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
 
 Streaming azureml-logs/hyperdrive.txt
 =====================================
 
-[2022-09-19T17:55:55.277689][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
-[2022-09-19T17:55:56.0101449Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_0&#39; 
-[2022-09-19T17:55:56.1298767Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_1&#39; 
-[2022-09-19T17:55:56.2524562Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_2&#39; 
-[2022-09-19T17:55:56.341063][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-19T17:55:56.6103829Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_2&#39; 
-[2022-09-19T17:55:56.3946228Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_3&#39; 
-[2022-09-19T17:55:56.6972385Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_3&#39; 
-[2022-09-19T17:55:56.7496972Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_1&#39; 
-[2022-09-19T17:55:56.8768835Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_0&#39; 
-[2022-09-19T17:59:55.220661][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
-[2022-09-19T17:59:55.4936457Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_4&#39; 
-[2022-09-19T17:59:55.6084829Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_5&#39; 
-[2022-09-19T17:59:55.7329467Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_6&#39; 
-[2022-09-19T17:59:55.7625419Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_4&#39; 
-[2022-09-19T17:59:55.7810030Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_7&#39; 
-[2022-09-19T17:59:55.760301][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-19T17:59:55.8486108Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_5&#39; 
-[2022-09-19T17:59:55.9417322Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_6&#39; 
-[2022-09-19T17:59:55.9990669Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_7&#39; 
-[2022-09-19T18:00:55.195523][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
-[2022-09-19T18:00:55.5055424Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_8&#39; 
-[2022-09-19T18:00:55.6258602Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_9&#39; 
-[2022-09-19T18:00:55.7592191Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_10&#39; 
-[2022-09-19T18:00:55.8138029Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_8&#39; 
-[2022-09-19T18:00:55.8899355Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_11&#39; 
-[2022-09-19T18:00:55.9051529Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_9&#39; 
-[2022-09-19T18:00:55.849238][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-19T18:00:56.0048886Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_10&#39; 
-[2022-09-19T18:00:56.1002865Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_11&#39; 
-[2022-09-19T18:01:55.222333][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
-[2022-09-19T18:01:55.5292624Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_12&#39; 
-[2022-09-19T18:01:55.6537320Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_13&#39; 
-[2022-09-19T18:01:55.7512010Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_14&#39; 
-[2022-09-19T18:01:55.7523680Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_12&#39; 
-[2022-09-19T18:01:55.8296511Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_15&#39; 
-[2022-09-19T18:01:55.789947][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-19T18:01:55.9524482Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_13&#39; 
-[2022-09-19T18:01:56.0445386Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_15&#39; 
-[2022-09-19T18:01:56.1909589Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_14&#39; 
-[2022-09-19T18:02:55.274752][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
-[2022-09-19T18:02:55.6160745Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_16&#39; 
-[2022-09-19T18:02:55.8282808Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_16&#39; 
-[2022-09-19T18:02:55.8592917Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_17&#39; 
-[2022-09-19T18:02:55.9268183Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_18&#39; 
-[2022-09-19T18:02:56.0214600Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_19&#39; 
-[2022-09-19T18:02:56.1399330Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_18&#39; 
-[2022-09-19T18:02:55.996944][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-19T18:02:56.3678210Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_17&#39; 
-[2022-09-19T18:02:56.4415097Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_76473968-7195-4c13-9bf4-0939541d5052_19&#39; 
-[2022-09-19T18:03:25.174000][GENERATOR][INFO]Max number of jobs &#39;20&#39; reached for experiment.
-[2022-09-19T18:03:25.285479][GENERATOR][INFO]All jobs generated.
-[2022-09-19T18:04:31.784853][CONTROLLER][INFO]Experiment was &#39;ExperimentStatus.RUNNING&#39;, is &#39;ExperimentStatus.FINISHED&#39;.
+[2022-09-20T21:55:01.417671][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
+[2022-09-20T21:55:02.2727144Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_0&#39; 
+[2022-09-20T21:55:02.4143948Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_1&#39; 
+[2022-09-20T21:55:02.5324194Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_2&#39; 
+[2022-09-20T21:55:02.585217][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T21:55:02.6745847Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_3&#39; 
+[2022-09-20T21:55:03.0851284Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_0&#39; 
+[2022-09-20T21:55:03.0581735Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_1&#39; 
+[2022-09-20T21:55:03.0988418Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_3&#39; 
+[2022-09-20T21:55:03.0458405Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_2&#39; 
+[2022-09-20T22:09:01.186900][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
+[2022-09-20T22:09:01.395089][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:09:01.4466560Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39; 
+[2022-09-20T22:09:01.8370422Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39; 
+[2022-09-20T22:09:31.166330][GENERATOR][INFO]Trying to sample &#39;3&#39; jobs from the hyperparameter space
+[2022-09-20T22:09:31.4728831Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_5&#39; 
+[2022-09-20T22:09:31.6472955Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_6&#39; 
+[2022-09-20T22:09:31.670304][GENERATOR][INFO]Successfully sampled &#39;3&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:09:31.7076304Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_7&#39; 
+[2022-09-20T22:09:31.7131592Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_5&#39; 
+[2022-09-20T22:09:31.9193639Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_7&#39; 
+[2022-09-20T22:09:31.8769939Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_6&#39; 
+[2022-09-20T22:10:01.231413][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
+[2022-09-20T22:10:01.4953639Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_8&#39; 
+[2022-09-20T22:10:01.473600][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:10:01.7082221Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_8&#39; 
+[2022-09-20T22:10:31.288458][GENERATOR][INFO]Trying to sample &#39;3&#39; jobs from the hyperparameter space
+[2022-09-20T22:10:31.6489405Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_9&#39; 
+[2022-09-20T22:10:31.7221587Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_10&#39; 
+[2022-09-20T22:10:31.8352087Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_11&#39; 
+[2022-09-20T22:10:31.802331][GENERATOR][INFO]Successfully sampled &#39;3&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:10:31.9632931Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_9&#39; 
+[2022-09-20T22:10:32.0444409Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_10&#39; 
+[2022-09-20T22:10:32.2111979Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_11&#39; 
+[2022-09-20T22:11:01.213967][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
+[2022-09-20T22:11:01.523386][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:11:01.5672390Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_12&#39; 
+[2022-09-20T22:11:01.7779323Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_12&#39; 
+[2022-09-20T22:11:31.190722][GENERATOR][INFO]Trying to sample &#39;2&#39; jobs from the hyperparameter space
+[2022-09-20T22:11:31.4748733Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_13&#39; 
+[2022-09-20T22:11:31.6077664Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_14&#39; 
+[2022-09-20T22:11:31.563112][GENERATOR][INFO]Successfully sampled &#39;2&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:11:31.7581239Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_13&#39; 
+[2022-09-20T22:11:31.9089694Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_14&#39; 
+[2022-09-20T22:12:01.185304][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
+[2022-09-20T22:12:01.419327][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:12:01.4541376Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_15&#39; 
+[2022-09-20T22:12:01.6628375Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_15&#39; 
+[2022-09-20T22:12:31.193861][GENERATOR][INFO]Trying to sample &#39;3&#39; jobs from the hyperparameter space
+[2022-09-20T22:12:31.5419330Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_16&#39; 
+[2022-09-20T22:12:31.6420791Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_17&#39; 
+[2022-09-20T22:12:31.754276][GENERATOR][INFO]Successfully sampled &#39;3&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:12:31.8047066Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_18&#39; 
+[2022-09-20T22:12:31.8606286Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_16&#39; 
+[2022-09-20T22:12:31.9311624Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_17&#39; 
+[2022-09-20T22:12:32.0355815Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_18&#39; 
+[2022-09-20T22:13:01.489171][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
+[2022-09-20T22:13:02.0063513Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_19&#39; 
+[2022-09-20T22:13:01.966203][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-20T22:13:02.2039799Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_19&#39; 
+[2022-09-20T22:13:31.231369][GENERATOR][INFO]Max number of jobs &#39;20&#39; reached for experiment.
+[2022-09-20T22:13:31.356770][GENERATOR][INFO]All jobs generated.
+[2022-09-20T22:14:14.704131][CONTROLLER][INFO]Experiment was &#39;ExperimentStatus.RUNNING&#39;, is &#39;ExperimentStatus.FINISHED&#39;.
 
 Execution Summary
 =================
-RunId: HD_76473968-7195-4c13-9bf4-0939541d5052
-Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid=/subscriptions/9a7511b8-150f-4a58-8528-3e7d50216c31/resourcegroups/aml-quickstarts-207932/workspaces/quick-starts-ws-207932&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
+RunId: HD_3fea831a-227a-46e6-b6f1-a0851eed65b8
+Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid=/subscriptions/cdbe0b43-92a0-4715-838a-f2648cc7ad21/resourcegroups/aml-quickstarts-208099/workspaces/quick-starts-ws-208099&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
 
 </pre>
 </div>
@@ -14883,30 +14938,30 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;runId&#39;: &#39;HD_76473968-7195-4c13-9bf4-0939541d5052&#39;,
+<pre>{&#39;runId&#39;: &#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8&#39;,
  &#39;target&#39;: &#39;StandardD2CPUCluster&#39;,
  &#39;status&#39;: &#39;Completed&#39;,
- &#39;startTimeUtc&#39;: &#39;2022-09-19T17:55:54.584308Z&#39;,
- &#39;endTimeUtc&#39;: &#39;2022-09-19T18:04:31.523239Z&#39;,
+ &#39;startTimeUtc&#39;: &#39;2022-09-20T21:55:00.624649Z&#39;,
+ &#39;endTimeUtc&#39;: &#39;2022-09-20T22:14:14.506004Z&#39;,
  &#39;services&#39;: {},
  &#39;properties&#39;: {&#39;primary_metric_config&#39;: &#39;{&#34;name&#34;:&#34;Accuracy&#34;,&#34;goal&#34;:&#34;maximize&#34;}&#39;,
   &#39;resume_from&#39;: &#39;null&#39;,
   &#39;runTemplate&#39;: &#39;HyperDrive&#39;,
   &#39;azureml.runsource&#39;: &#39;hyperdrive&#39;,
   &#39;platform&#39;: &#39;AML&#39;,
-  &#39;ContentSnapshotId&#39;: &#39;474302f1-5ddd-4230-a5dc-59aaf630c33b&#39;,
+  &#39;ContentSnapshotId&#39;: &#39;606d047d-3b82-4366-9f4f-f62b9b3bc45a&#39;,
   &#39;user_agent&#39;: &#39;python/3.8.5 (Linux-5.15.0-1017-azure-x86_64-with-glibc2.10) msrest/0.7.1 Hyperdrive.Service/1.0.0 Hyperdrive.SDK/core.1.44.0&#39;,
   &#39;space_size&#39;: &#39;infinite_space_size&#39;,
-  &#39;score&#39;: &#39;0.910536537994659&#39;,
-  &#39;best_child_run_id&#39;: &#39;HD_76473968-7195-4c13-9bf4-0939541d5052_15&#39;,
+  &#39;score&#39;: &#39;0.9099295945617868&#39;,
+  &#39;best_child_run_id&#39;: &#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39;,
   &#39;best_metric_status&#39;: &#39;Succeeded&#39;,
-  &#39;best_data_container_id&#39;: &#39;dcid.HD_76473968-7195-4c13-9bf4-0939541d5052_15&#39;},
+  &#39;best_data_container_id&#39;: &#39;dcid.HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39;},
  &#39;inputDatasets&#39;: [],
  &#39;outputDatasets&#39;: [],
  &#39;runDefinition&#39;: {&#39;configuration&#39;: None,
@@ -14915,9 +14970,9 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
    &#39;amlClientModule&#39;: &#39;[Scrubbed]&#39;,
    &#39;amlClientFunction&#39;: &#39;[Scrubbed]&#39;,
    &#39;tenantId&#39;: &#39;660b3398-b80e-49d2-bc5b-ac1dc93b5254&#39;,
-   &#39;amlClientRequestId&#39;: &#39;6082cc7b-5647-453e-afb6-05d84f869ad3&#39;,
-   &#39;amlClientSessionId&#39;: &#39;33e38526-d53f-4688-9713-118cde7d425b&#39;,
-   &#39;subscriptionId&#39;: &#39;9a7511b8-150f-4a58-8528-3e7d50216c31&#39;,
+   &#39;amlClientRequestId&#39;: &#39;31829298-e7d9-4a71-8795-f470606ba3e3&#39;,
+   &#39;amlClientSessionId&#39;: &#39;502afa2b-0434-48df-a395-27c95adff4dd&#39;,
+   &#39;subscriptionId&#39;: &#39;cdbe0b43-92a0-4715-838a-f2648cc7ad21&#39;,
    &#39;estimator&#39;: &#39;NoneType&#39;,
    &#39;samplingMethod&#39;: &#39;RANDOM&#39;,
    &#39;terminationPolicy&#39;: &#39;Bandit&#39;,
@@ -14926,7 +14981,7 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
    &#39;maxConcurrentRuns&#39;: 4,
    &#39;maxDurationMinutes&#39;: 10080,
    &#39;vmSize&#39;: None},
-  &#39;snapshotId&#39;: &#39;474302f1-5ddd-4230-a5dc-59aaf630c33b&#39;,
+  &#39;snapshotId&#39;: &#39;606d047d-3b82-4366-9f4f-f62b9b3bc45a&#39;,
   &#39;snapshots&#39;: [],
   &#39;sourceCodeDataReference&#39;: None,
   &#39;parentRunId&#39;: None,
@@ -14937,8 +14992,8 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
   &#39;properties&#39;: {},
   &#39;tags&#39;: {},
   &#39;aggregatedArtifactPath&#39;: None},
- &#39;logFiles&#39;: {&#39;azureml-logs/hyperdrive.txt&#39;: &#39;https://mlstrg207932.blob.core.windows.net/azureml/ExperimentRun/dcid.HD_76473968-7195-4c13-9bf4-0939541d5052/azureml-logs/hyperdrive.txt?sv=2019-07-07&amp;sr=b&amp;sig=GOwCHBVbeBV7QXxLaHBrYD9%2FxqVmKqUZ%2Bur7M8Rji10%3D&amp;skoid=19bd1db4-c03b-421e-8ae1-30704ce9c38f&amp;sktid=660b3398-b80e-49d2-bc5b-ac1dc93b5254&amp;skt=2022-09-19T14%3A45%3A30Z&amp;ske=2022-09-20T22%3A55%3A30Z&amp;sks=b&amp;skv=2019-07-07&amp;st=2022-09-19T17%3A54%3A44Z&amp;se=2022-09-20T02%3A04%3A44Z&amp;sp=r&#39;},
- &#39;submittedBy&#39;: &#39;ODL_User 207932&#39;}</pre>
+ &#39;logFiles&#39;: {&#39;azureml-logs/hyperdrive.txt&#39;: &#39;https://mlstrg208099.blob.core.windows.net/azureml/ExperimentRun/dcid.HD_3fea831a-227a-46e6-b6f1-a0851eed65b8/azureml-logs/hyperdrive.txt?sv=2019-07-07&amp;sr=b&amp;sig=gOvn21CDFlhnVk9hXhSjlsXXdyEJmlghF9JA7hvrK6M%3D&amp;skoid=69a06219-00de-4a45-8618-b3fda439363a&amp;sktid=660b3398-b80e-49d2-bc5b-ac1dc93b5254&amp;skt=2022-09-20T21%3A43%3A52Z&amp;ske=2022-09-22T05%3A53%3A52Z&amp;sks=b&amp;skv=2019-07-07&amp;st=2022-09-20T22%3A04%3A16Z&amp;se=2022-09-21T06%3A14%3A16Z&amp;sp=r&#39;},
+ &#39;submittedBy&#39;: &#39;ODL_User 208099&#39;}</pre>
 </div>
 
 </div>
@@ -14952,29 +15007,17 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
-<span class="c1"># DW: Get your best run and save the model from that run.</span>
+<span class="c1"># Get your best run and save the model from that run.</span>
 
+<span class="c1"># DW: First, get the best run</span>
 <span class="n">best_run</span> <span class="o">=</span> <span class="n">hyperdrive_run</span><span class="o">.</span><span class="n">get_best_run_by_primary_metric</span><span class="p">()</span> <span class="c1"># The best run based on the primary metric</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">best_run</span><span class="o">.</span><span class="n">get_metrics</span><span class="p">())</span> <span class="c1"># Display the parameters and the primary metric values of the best run</span>
 
-<span class="c1"># Create the outputs folder if it doesn't already exist</span>
-<span class="k">if</span> <span class="s2">"outputs"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">"./outputs"</span><span class="p">)</span>
-
-<span class="c1"># Could not get joblib.dump to work as it gave: TypeError: cannot pickle '_queue.SimpleQueue' object</span>
-<span class="c1"># joblib.dump(best_run,"./outputs/model.joblib")</span>
-
-<span class="c1"># Could not get register_model to work as it gave: Could not locate the provided model_path</span>
-<span class="c1"># best_run.register_model(workspace=ws,</span>
-<span class="c1">#                         model_name="best_run_hyperdrive",</span>
-<span class="c1">#                         model_path="./outputs/hyperdrive.model")</span>
-
-<span class="c1"># Could not get download_file to work as it gave: File with path ... was not found</span>
-<span class="c1"># best_run.download_file("outputs/hyperdrive.model", "best_run_hyperdrive")</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best_run</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="c1"># Display the ID of the best run</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best_run</span><span class="o">.</span><span class="n">get_metrics</span><span class="p">())</span> <span class="c1"># Display the parameters and primary metric values of the best run</span>
 </pre></div>
 
      </div>
@@ -14996,9 +15039,61 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;Regularization Strength:&#39;: 0.7183434965694366, &#39;Max iterations:&#39;: 100, &#39;Accuracy&#39;: 0.910536537994659}
+<pre>HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4
+{&#39;Regularization Strength:&#39;: 0.6914687720101343, &#39;Max iterations:&#39;: 200, &#39;Accuracy&#39;: 0.9099295945617868}
 </pre>
 </div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_run</span><span class="o">.</span><span class="n">get_file_names</span><span class="p">()</span> <span class="c1"># DW: Next, identify the file names for the best run</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;logs/azureml/dataprep/0/backgroundProcess.log&#39;,
+ &#39;logs/azureml/dataprep/0/backgroundProcess_Telemetry.log&#39;,
+ &#39;logs/azureml/dataprep/0/rslex.log.2022-09-20-22&#39;,
+ &#39;outputs/model.joblib&#39;,
+ &#39;system_logs/cs_capability/cs-capability.log&#39;,
+ &#39;system_logs/hosttools_capability/hosttools-capability.log&#39;,
+ &#39;system_logs/lifecycler/execution-wrapper.log&#39;,
+ &#39;system_logs/lifecycler/lifecycler.log&#39;,
+ &#39;system_logs/metrics_capability/metrics-capability.log&#39;,
+ &#39;system_logs/snapshot_capability/snapshot-capability.log&#39;,
+ &#39;user_logs/std_log.txt&#39;]</pre>
+</div>
+
 </div>
 
 </div>
@@ -15010,7 +15105,36 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Finally, register the model of the best run to save it</span>
+<span class="n">hd_model</span> <span class="o">=</span> <span class="n">best_run</span><span class="o">.</span><span class="n">register_model</span><span class="p">(</span><span class="n">model_name</span> <span class="o">=</span> <span class="s1">'hd_model'</span><span class="p">,</span>
+                                   <span class="n">model_path</span> <span class="o">=</span> <span class="s1">'outputs/model.joblib'</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="AutoML-run-on-the-same-dataset">AutoML run on the same dataset<a class="anchor-link" href="#AutoML-run-on-the-same-dataset">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.data.dataset_factory</span> <span class="kn">import</span> <span class="n">TabularDatasetFactory</span>
@@ -15033,7 +15157,7 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">train</span> <span class="kn">import</span> <span class="n">clean_data</span>
@@ -15052,7 +15176,7 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Let's first take a look at the data.</span>
@@ -15074,7 +15198,7 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15258,10 +15382,10 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># And now see what the output results look like.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: And now see what the output results look like.</span>
 <span class="n">y</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
@@ -15280,7 +15404,7 @@ Web View: https://ml.azure.com/runs/HD_76473968-7195-4c13-9bf4-0939541d5052?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15304,17 +15428,410 @@ Name: y, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>So we have that many numerical field are present, and we want to use them to predict a 0 or 1 output. As such, this is a classification problem.</p>
+<p>So we have that many numerical field are present, and we want to use them to predict a 0 or 1 output. As such, this is a classification problem, just as was done with the logistic regression within the <code>train.py</code> script.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>As the AutoML config will use just one dataset, <code>training_data</code>, we need to merge in the target column, as the cleaning process from the Udacity provided code has split the data into <code>x</code> with the various fields, and <code>y</code> with the target classification (0 or 1) that we want to predict. This target field can then be referred to as the <code>label_column_name</code> of the <code>training_data</code>.</p>
+<p>Note that as per the below link, we do not need to split the data into training and testing sets as the AutoML will do this automatically, using a method depending on the number of rows of data.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/machine-learning/how-to-configure-cross-validation-data-splits">https://learn.microsoft.com/en-us/azure/machine-learning/how-to-configure-cross-validation-data-splits</a></p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Create a new column in dataframe x to store the target y values.</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">'y'</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span>
+<span class="n">x</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>marital</th>
+      <th>default</th>
+      <th>housing</th>
+      <th>loan</th>
+      <th>month</th>
+      <th>day_of_week</th>
+      <th>duration</th>
+      <th>campaign</th>
+      <th>pdays</th>
+      <th>...</th>
+      <th>contact_telephone</th>
+      <th>education_basic.4y</th>
+      <th>education_basic.6y</th>
+      <th>education_basic.9y</th>
+      <th>education_high.school</th>
+      <th>education_illiterate</th>
+      <th>education_professional.course</th>
+      <th>education_university.degree</th>
+      <th>education_unknown</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>57</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>371</td>
+      <td>1</td>
+      <td>999</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>55</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5</td>
+      <td>4</td>
+      <td>285</td>
+      <td>2</td>
+      <td>999</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>33</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>52</td>
+      <td>1</td>
+      <td>999</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>36</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>5</td>
+      <td>355</td>
+      <td>4</td>
+      <td>999</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>27</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>5</td>
+      <td>189</td>
+      <td>2</td>
+      <td>999</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 40 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>AutoML can only use a Pandas dataframe as the dataset if it is running locally. If it is running on a compute target, such as the compute cluster specified in this Jupyter Notebook, then the dataset must be coverted to a tabular dataset.<br>
+Ref: <a href="https://knowledge.udacity.com/questions/469948">https://knowledge.udacity.com/questions/469948</a></p>
+<p>We can do this using <code>TabularDatasetFactory.register_pandas_dataframe</code> as detailed in the below link:<br>
+<a href="https://learn.microsoft.com/en-us/python/api/azureml-core/azureml.data.dataset_factory.tabulardatasetfactory?view=azure-ml-py">https://learn.microsoft.com/en-us/python/api/azureml-core/azureml.data.dataset_factory.tabulardatasetfactory?view=azure-ml-py</a></p>
+<p>Or we can export the data to CSV and then upload it to a datastore in the workspace.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># List the datastores in the workspace</span>
+<span class="k">for</span> <span class="n">datastore</span> <span class="ow">in</span> <span class="n">ws</span><span class="o">.</span><span class="n">datastores</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">datastore</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Default datastore: '</span><span class="p">,</span><span class="n">ws</span><span class="o">.</span><span class="n">get_default_datastore</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>2022-09-20:23:21:02,228 INFO     [datastore_client.py:991] &lt;azureml.core.authentication.InteractiveLoginAuthentication object at 0x7f7d9e422d00&gt;
+2022-09-20:23:21:02,526 INFO     [datastore_client.py:991] &lt;azureml.core.authentication.InteractiveLoginAuthentication object at 0x7f7d9e422d00&gt;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>datastore
+workspaceworkingdirectory
+workspaceartifactstore
+workspacefilestore
+workspaceblobstore
+
+Default datastore:  workspaceblobstore
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Store the default datastore in a variable</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_default_datastore</span><span class="p">()</span>
+
+<span class="c1"># Save the Pandas dataframe as a CSV file within the training folder</span>
+<span class="n">x</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'training/bankmarketing-train.csv'</span><span class="p">)</span>
+
+<span class="c1"># Upload the training folder to the datastore</span>
+<span class="n">datastore</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">src_dir</span><span class="o">=</span><span class="s1">'training'</span><span class="p">,</span> <span class="n">target_path</span><span class="o">=</span><span class="s1">'training'</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Create our dataset object for the AutoML run</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">TabularDatasetFactory</span><span class="o">.</span><span class="n">from_delimited_files</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="p">[(</span><span class="n">datastore</span><span class="p">,</span>
+                                                            <span class="p">(</span><span class="s1">'training/bankmarketing-train.csv'</span><span class="p">))])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>2022-09-20:23:48:40,480 INFO     [datastore_client.py:991] &lt;azureml.core.authentication.InteractiveLoginAuthentication object at 0x7f7d9e422d00&gt;
+2022-09-20:23:48:41,128 INFO     [azure_storage_datastore.py:789] Called AzureBlobDatastore.upload
+2022-09-20:23:48:41,142 INFO     [azure_storage_datastore.py:370] Uploading an estimated of 1 files
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Uploading an estimated of 1 files
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>2022-09-20:23:48:41,394 INFO     [azure_storage_datastore.py:370] Uploading training/bankmarketing-train.csv
+2022-09-20:23:48:41,395 INFO     [azure_storage_datastore.py:370] Uploaded training/bankmarketing-train.csv, 1 files out of an estimated total of 1
+2022-09-20:23:48:41,396 INFO     [azure_storage_datastore.py:370] Uploaded 1 files
+2022-09-20:23:48:41,397 INFO     [azure_storage_datastore.py:799] Finished AzureBlobDatastore.upload with count=1.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Uploading training/bankmarketing-train.csv
+Uploaded training/bankmarketing-train.csv, 1 files out of an estimated total of 1
+Uploaded 1 files
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.train.automl</span> <span class="kn">import</span> <span class="n">AutoMLConfig</span>
@@ -15326,10 +15843,11 @@ Name: y, dtype: int64</pre>
 <span class="n">automl_config</span> <span class="o">=</span> <span class="n">AutoMLConfig</span><span class="p">(</span>
     <span class="n">experiment_timeout_minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
     <span class="n">task</span><span class="o">=</span><span class="s1">'classification'</span><span class="p">,</span>
-    <span class="n">primary_metric</span><span class="o">=</span><span class="s1">'Accuracy'</span><span class="p">,</span>
-    <span class="n">training_data</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
-    <span class="n">label_column_name</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
-    <span class="n">n_cross_validations</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">primary_metric</span><span class="o">=</span><span class="s1">'accuracy'</span><span class="p">,</span>
+    <span class="n">training_data</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span>
+    <span class="n">label_column_name</span><span class="o">=</span><span class="s1">'y'</span><span class="p">,</span>
+    <span class="n">n_cross_validations</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">compute_target</span><span class="o">=</span><span class="n">cpu_cluster</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15337,12 +15855,52 @@ Name: y, dtype: int64</pre>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [61]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">azureml</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">train</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">automl</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> AutoMLConfig
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(95,135,135)"># Set parameters for AutoMLConfig</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span style="color: rgb(95,135,135)"># NOTE: DO NOT CHANGE THE experiment_timeout_minutes PARAMETER OR YOUR INSTANCE WILL TIME OUT.</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> <span style="color: rgb(95,135,135)"># If you wish to run the experiment longer, you will need to run this notebook in your own</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span style="color: rgb(95,135,135)"># Azure tenant, which will incur personal costs.</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> automl_config <span style="color: rgb(98,98,98)">=</span> AutoMLConfig(
+<span class="ansi-green-intense-fg ansi-bold">      8</span>     experiment_timeout_minutes<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">30</span>,
+<span class="ansi-green-intense-fg ansi-bold">      9</span>     task<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">classification</span><span style="color: rgb(175,0,0)">&#39;</span>,
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     primary_metric<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">accuracy</span><span style="color: rgb(175,0,0)">&#39;</span>,
+<span class="ansi-green-fg">---&gt; 11</span>     training_data<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">dataset</span>,
+<span class="ansi-green-intense-fg ansi-bold">     12</span>     label_column_name<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">y</span><span style="color: rgb(175,0,0)">&#39;</span>,
+<span class="ansi-green-intense-fg ansi-bold">     13</span>     n_cross_validations<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">5</span>,
+<span class="ansi-green-intense-fg ansi-bold">     14</span>     compute_target<span style="color: rgb(98,98,98)">=</span>cpu_cluster)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;dataset&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Submit your automl run</span>
@@ -15373,7 +15931,7 @@ Name: y, dtype: int64</pre>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ConfigException</span>                           Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [53]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 3&gt;</span><span class="ansi-blue-fg">()</span>
+Input <span class="ansi-green-fg">In [33]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 3&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(95,135,135)"># DW: Submit your automl run</span>
 <span class="ansi-green-fg">----&gt; 3</span> automl_run <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">exp</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">submit</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">automl_config</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">show_output</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> automl_run<span style="color: rgb(98,98,98)">.</span>wait_for_completion(show_output<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
@@ -15398,39 +15956,37 @@ File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-
 <span class="ansi-green-intense-fg ansi-bold">     94</span> fit_params <span style="color: rgb(98,98,98)">=</span> automl_config_object<span style="color: rgb(98,98,98)">.</span>_get_fit_params()
 <span class="ansi-green-intense-fg ansi-bold">     96</span> <span style="color: rgb(95,135,135)"># retrieve settings which are present in user but not part of fit_params</span>
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/train/automl/automlconfig.py:2231</span>, in <span class="ansi-cyan-fg">AutoMLConfig._validate_config_settings</span><span class="ansi-blue-fg">(self, workspace)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2227</span>     <span style="color: rgb(95,135,135)"># todo is there a scenario where we are accessing the label column via an integer index?</span>
-<span class="ansi-green-intense-fg ansi-bold">   2228</span>     <span style="color: rgb(95,135,135)"># if not, the following should only check for string</span>
-<span class="ansi-green-intense-fg ansi-bold">   2229</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> ((<span style="color: rgb(0,135,0)">isinstance</span>(label_column_name_val, <span style="color: rgb(0,135,0)">int</span>) <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> has_training_input_pandas_obj)
-<span class="ansi-green-intense-fg ansi-bold">   2230</span>             <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> <span style="color: rgb(0,135,0)">isinstance</span>(label_column_name_val, <span style="color: rgb(0,135,0)">str</span>)):
-<span class="ansi-green-fg">-&gt; 2231</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> ConfigException<span style="color: rgb(98,98,98)">.</span>_with_error(
-<span class="ansi-green-intense-fg ansi-bold">   2232</span>             AzureMLError<span style="color: rgb(98,98,98)">.</span>create(
-<span class="ansi-green-intense-fg ansi-bold">   2233</span>                 InvalidArgumentType, target<span style="color: rgb(98,98,98)">=</span>label_column_name_param_name,
-<span class="ansi-green-intense-fg ansi-bold">   2234</span>                 argument<span style="color: rgb(98,98,98)">=</span>label_column_name_param_name, actual_type<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(0,135,0)">type</span>(label_column_name_val),
-<span class="ansi-green-intense-fg ansi-bold">   2235</span>                 expected_types<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">, </span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(98,98,98)">.</span>join([<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">int</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">str</span><span style="color: rgb(175,0,0)">&#34;</span>]),
-<span class="ansi-green-intense-fg ansi-bold">   2236</span>                 reference_code<span style="color: rgb(98,98,98)">=</span>ReferenceCodes<span style="color: rgb(98,98,98)">.</span>_AUTOML_CONFIG_LABEL_COL_NAME_WRONG_TYPE
-<span class="ansi-green-intense-fg ansi-bold">   2237</span>             )
-<span class="ansi-green-intense-fg ansi-bold">   2238</span>         )
-<span class="ansi-green-intense-fg ansi-bold">   2239</span> <span style="color: rgb(95,135,135)"># Weight Column Name</span>
-<span class="ansi-green-intense-fg ansi-bold">   2240</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>user_settings<span style="color: rgb(98,98,98)">.</span>get(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">weight_column_name</span><span style="color: rgb(175,0,0)">&#39;</span>) <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/train/automl/automlconfig.py:2166</span>, in <span class="ansi-cyan-fg">AutoMLConfig._validate_config_settings</span><span class="ansi-blue-fg">(self, workspace)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2163</span>         input_type <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">str</span>(<span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>user_settings<span style="color: rgb(98,98,98)">.</span>get(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">training_data</span><span style="color: rgb(175,0,0)">&#39;</span>)<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span>)
+<span class="ansi-green-intense-fg ansi-bold">   2164</span>         target <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">training_data</span><span style="color: rgb(175,0,0)">&#34;</span>
+<span class="ansi-green-fg">-&gt; 2166</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> ConfigException<span style="color: rgb(98,98,98)">.</span>_with_error(
+<span class="ansi-green-intense-fg ansi-bold">   2167</span>         AzureMLError<span style="color: rgb(98,98,98)">.</span>create(
+<span class="ansi-green-intense-fg ansi-bold">   2168</span>             InvalidInputDatatype, target<span style="color: rgb(98,98,98)">=</span>target, input_type<span style="color: rgb(98,98,98)">=</span>input_type,
+<span class="ansi-green-intense-fg ansi-bold">   2169</span>             supported_types<span style="color: rgb(98,98,98)">=</span>SupportedInputDatatypes<span style="color: rgb(98,98,98)">.</span>TABULAR_DATASET
+<span class="ansi-green-intense-fg ansi-bold">   2170</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   2171</span>     )
+<span class="ansi-green-intense-fg ansi-bold">   2172</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> workspace <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> compute_target <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-intense-fg ansi-bold">   2173</span>     all_compute_targets <span style="color: rgb(98,98,98)">=</span> workspace<span style="color: rgb(98,98,98)">.</span>compute_targets
 
 <span class="ansi-red-fg">ConfigException</span>: ConfigException:
-	Message: Argument [label_column_name] is of unsupported type: [&lt;class &#39;pandas.core.series.Series&#39;&gt;]. Supported type(s): [int, str]
+	Message: Input of type &#39;&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;&#39; is not supported. Supported types: [azureml.data.tabular_dataset.TabularDataset]Please refer to documentation for converting to Supported types: https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.dataset.dataset?view=azure-ml-py
 	InnerException: None
 	ErrorResponse 
 {
     &#34;error&#34;: {
         &#34;code&#34;: &#34;UserError&#34;,
-        &#34;message&#34;: &#34;Argument [label_column_name] is of unsupported type: [&lt;class &#39;pandas.core.series.Series&#39;&gt;]. Supported type(s): [int, str]&#34;,
+        &#34;message&#34;: &#34;Input of type &#39;&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;&#39; is not supported. Supported types: [azureml.data.tabular_dataset.TabularDataset]Please refer to documentation for converting to Supported types: https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.dataset.dataset?view=azure-ml-py&#34;,
         &#34;details_uri&#34;: &#34;https://aka.ms/AutoMLConfig&#34;,
-        &#34;target&#34;: &#34;label_column_name&#34;,
+        &#34;target&#34;: &#34;training_data&#34;,
         &#34;inner_error&#34;: {
             &#34;code&#34;: &#34;BadArgument&#34;,
             &#34;inner_error&#34;: {
-                &#34;code&#34;: &#34;ArgumentInvalid&#34;
+                &#34;code&#34;: &#34;ArgumentInvalid&#34;,
+                &#34;inner_error&#34;: {
+                    &#34;code&#34;: &#34;InvalidInputDatatype&#34;
+                }
             }
-        },
-        &#34;reference_code&#34;: &#34;061ed905-e59e-42b9-ad95-cd18f40b4358&#34;
+        }
     }
 }</pre>
 </div>
@@ -15459,6 +16015,17 @@ File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Tidy-up-resources">Tidy up resources<a class="anchor-link" href="#Tidy-up-resources">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15467,7 +16034,10 @@ File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finally, delete the CPU cluster to tidy up the resources.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># End the experiment logging that was started in the first code cell</span>
+<span class="n">run</span><span class="o">.</span><span class="n">complete</span><span class="p">()</span>
+
+<span class="c1"># Finally, delete the CPU cluster</span>
 <span class="n">cpu_cluster</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </pre></div>
 
