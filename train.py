@@ -68,6 +68,12 @@ def main():
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
     accuracy = model.score(x_test, y_test)
+    
+    # As per Udacity Knowledge Thread: knowledge.udacity.com/questions/357007
+    # This is done after fitting the model
+    os.makedirs('outputs', exist_ok=True) # Create an output folder
+    joblib.dump(model, 'outputs/model.joblib') # Output the model to the outputs folder
+    
     run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
