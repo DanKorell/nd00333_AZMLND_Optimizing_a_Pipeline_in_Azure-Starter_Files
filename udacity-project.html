@@ -14647,10 +14647,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Workspace name: quick-starts-ws-208099
+<pre>Workspace name: quick-starts-ws-208238
 Azure region: southcentralus
-Subscription id: cdbe0b43-92a0-4715-838a-f2648cc7ad21
-Resource group: aml-quickstarts-208099
+Subscription id: 48a74bb7-9950-4cc1-9caa-5d50f995cc55
+Resource group: aml-quickstarts-208238
 </pre>
 </div>
 </div>
@@ -14718,7 +14718,7 @@ Resource group: aml-quickstarts-208099
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>InProgress..
+<pre>InProgress.
 SucceededProvisioning operation finished, operation &#34;Succeeded&#34;
 Succeeded
 AmlCompute wait for completion finished
@@ -14748,7 +14748,7 @@ Minimum number of nodes requested have been provisioned
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.widgets</span> <span class="kn">import</span> <span class="n">RunDetails</span>
@@ -14802,7 +14802,7 @@ Minimum number of nodes requested have been provisioned
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Submit your hyperdrive run to the experiment and show run details with the widget.</span>
@@ -14856,80 +14856,70 @@ Minimum number of nodes requested have been provisioned
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>RunId: HD_3fea831a-227a-46e6-b6f1-a0851eed65b8
-Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid=/subscriptions/cdbe0b43-92a0-4715-838a-f2648cc7ad21/resourcegroups/aml-quickstarts-208099/workspaces/quick-starts-ws-208099&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
+<pre>RunId: HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38
+Web View: https://ml.azure.com/runs/HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38?wsid=/subscriptions/48a74bb7-9950-4cc1-9caa-5d50f995cc55/resourcegroups/aml-quickstarts-208238/workspaces/quick-starts-ws-208238&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
 
 Streaming azureml-logs/hyperdrive.txt
 =====================================
 
-[2022-09-20T21:55:01.417671][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
-[2022-09-20T21:55:02.2727144Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_0&#39; 
-[2022-09-20T21:55:02.4143948Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_1&#39; 
-[2022-09-20T21:55:02.5324194Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_2&#39; 
-[2022-09-20T21:55:02.585217][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T21:55:02.6745847Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_3&#39; 
-[2022-09-20T21:55:03.0851284Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_0&#39; 
-[2022-09-20T21:55:03.0581735Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_1&#39; 
-[2022-09-20T21:55:03.0988418Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_3&#39; 
-[2022-09-20T21:55:03.0458405Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_2&#39; 
-[2022-09-20T22:09:01.186900][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
-[2022-09-20T22:09:01.395089][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:09:01.4466560Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39; 
-[2022-09-20T22:09:01.8370422Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39; 
-[2022-09-20T22:09:31.166330][GENERATOR][INFO]Trying to sample &#39;3&#39; jobs from the hyperparameter space
-[2022-09-20T22:09:31.4728831Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_5&#39; 
-[2022-09-20T22:09:31.6472955Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_6&#39; 
-[2022-09-20T22:09:31.670304][GENERATOR][INFO]Successfully sampled &#39;3&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:09:31.7076304Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_7&#39; 
-[2022-09-20T22:09:31.7131592Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_5&#39; 
-[2022-09-20T22:09:31.9193639Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_7&#39; 
-[2022-09-20T22:09:31.8769939Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_6&#39; 
-[2022-09-20T22:10:01.231413][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
-[2022-09-20T22:10:01.4953639Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_8&#39; 
-[2022-09-20T22:10:01.473600][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:10:01.7082221Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_8&#39; 
-[2022-09-20T22:10:31.288458][GENERATOR][INFO]Trying to sample &#39;3&#39; jobs from the hyperparameter space
-[2022-09-20T22:10:31.6489405Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_9&#39; 
-[2022-09-20T22:10:31.7221587Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_10&#39; 
-[2022-09-20T22:10:31.8352087Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_11&#39; 
-[2022-09-20T22:10:31.802331][GENERATOR][INFO]Successfully sampled &#39;3&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:10:31.9632931Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_9&#39; 
-[2022-09-20T22:10:32.0444409Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_10&#39; 
-[2022-09-20T22:10:32.2111979Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_11&#39; 
-[2022-09-20T22:11:01.213967][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
-[2022-09-20T22:11:01.523386][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:11:01.5672390Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_12&#39; 
-[2022-09-20T22:11:01.7779323Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_12&#39; 
-[2022-09-20T22:11:31.190722][GENERATOR][INFO]Trying to sample &#39;2&#39; jobs from the hyperparameter space
-[2022-09-20T22:11:31.4748733Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_13&#39; 
-[2022-09-20T22:11:31.6077664Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_14&#39; 
-[2022-09-20T22:11:31.563112][GENERATOR][INFO]Successfully sampled &#39;2&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:11:31.7581239Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_13&#39; 
-[2022-09-20T22:11:31.9089694Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_14&#39; 
-[2022-09-20T22:12:01.185304][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
-[2022-09-20T22:12:01.419327][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:12:01.4541376Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_15&#39; 
-[2022-09-20T22:12:01.6628375Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_15&#39; 
-[2022-09-20T22:12:31.193861][GENERATOR][INFO]Trying to sample &#39;3&#39; jobs from the hyperparameter space
-[2022-09-20T22:12:31.5419330Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_16&#39; 
-[2022-09-20T22:12:31.6420791Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_17&#39; 
-[2022-09-20T22:12:31.754276][GENERATOR][INFO]Successfully sampled &#39;3&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:12:31.8047066Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_18&#39; 
-[2022-09-20T22:12:31.8606286Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_16&#39; 
-[2022-09-20T22:12:31.9311624Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_17&#39; 
-[2022-09-20T22:12:32.0355815Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_18&#39; 
-[2022-09-20T22:13:01.489171][GENERATOR][INFO]Trying to sample &#39;1&#39; jobs from the hyperparameter space
-[2022-09-20T22:13:02.0063513Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_19&#39; 
-[2022-09-20T22:13:01.966203][GENERATOR][INFO]Successfully sampled &#39;1&#39; jobs, they will soon be submitted to the execution target.
-[2022-09-20T22:13:02.2039799Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_19&#39; 
-[2022-09-20T22:13:31.231369][GENERATOR][INFO]Max number of jobs &#39;20&#39; reached for experiment.
-[2022-09-20T22:13:31.356770][GENERATOR][INFO]All jobs generated.
-[2022-09-20T22:14:14.704131][CONTROLLER][INFO]Experiment was &#39;ExperimentStatus.RUNNING&#39;, is &#39;ExperimentStatus.FINISHED&#39;.
+[2022-09-21T21:22:17.487522][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
+[2022-09-21T21:22:18.2200231Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_0&#39; 
+[2022-09-21T21:22:18.3557519Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_1&#39; 
+[2022-09-21T21:22:18.4671947Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_2&#39; 
+[2022-09-21T21:22:18.5934699Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_3&#39; 
+[2022-09-21T21:22:18.555441][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-21T21:22:18.8675534Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_0&#39; 
+[2022-09-21T21:22:18.9649400Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_2&#39; 
+[2022-09-21T21:22:18.8788905Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_1&#39; 
+[2022-09-21T21:22:18.9322126Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_3&#39; 
+[2022-09-21T21:37:47.157409][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
+[2022-09-21T21:37:47.5017111Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_4&#39; 
+[2022-09-21T21:37:47.6056467Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_5&#39; 
+[2022-09-21T21:37:47.7450772Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_6&#39; 
+[2022-09-21T21:37:47.784891][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-21T21:37:47.9755492Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_6&#39; 
+[2022-09-21T21:37:47.9398542Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_7&#39; 
+[2022-09-21T21:37:48.0494521Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_5&#39; 
+[2022-09-21T21:37:48.2682833Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_4&#39; 
+[2022-09-21T21:37:48.3623930Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_7&#39; 
+[2022-09-21T21:38:47.186237][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
+[2022-09-21T21:38:47.4898506Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_8&#39; 
+[2022-09-21T21:38:47.5810815Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_9&#39; 
+[2022-09-21T21:38:47.6871904Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_10&#39; 
+[2022-09-21T21:38:47.7064480Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_8&#39; 
+[2022-09-21T21:38:47.7863315Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_9&#39; 
+[2022-09-21T21:38:47.766540][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-21T21:38:47.8272092Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_11&#39; 
+[2022-09-21T21:38:47.9591980Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_10&#39; 
+[2022-09-21T21:38:48.1013994Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_11&#39; 
+[2022-09-21T21:39:47.276989][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
+[2022-09-21T21:39:47.6181364Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_12&#39; 
+[2022-09-21T21:39:47.6980455Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_13&#39; 
+[2022-09-21T21:39:47.8069880Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_14&#39; 
+[2022-09-21T21:39:47.9440836Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_12&#39; 
+[2022-09-21T21:39:47.9642781Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_15&#39; 
+[2022-09-21T21:39:47.9341801Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_13&#39; 
+[2022-09-21T21:39:47.925243][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-21T21:39:48.1137201Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_14&#39; 
+[2022-09-21T21:39:48.1919126Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_15&#39; 
+[2022-09-21T21:40:47.194471][GENERATOR][INFO]Trying to sample &#39;4&#39; jobs from the hyperparameter space
+[2022-09-21T21:40:47.4913764Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_16&#39; 
+[2022-09-21T21:40:47.5754846Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_17&#39; 
+[2022-09-21T21:40:47.7075005Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_16&#39; 
+[2022-09-21T21:40:47.7441671Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_18&#39; 
+[2022-09-21T21:40:47.8427426Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_17&#39; 
+[2022-09-21T21:40:47.8332265Z][SCHEDULER][INFO]Scheduling job, id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_19&#39; 
+[2022-09-21T21:40:47.781002][GENERATOR][INFO]Successfully sampled &#39;4&#39; jobs, they will soon be submitted to the execution target.
+[2022-09-21T21:40:48.0324434Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_19&#39; 
+[2022-09-21T21:40:48.0060618Z][SCHEDULER][INFO]Successfully scheduled a job. Id=&#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_18&#39; 
+[2022-09-21T21:41:17.203340][GENERATOR][INFO]Max number of jobs &#39;20&#39; reached for experiment.
+[2022-09-21T21:41:17.295794][GENERATOR][INFO]All jobs generated.
+[2022-09-21T21:42:33.816194][CONTROLLER][INFO]Experiment was &#39;ExperimentStatus.RUNNING&#39;, is &#39;ExperimentStatus.FINISHED&#39;.
 
 Execution Summary
 =================
-RunId: HD_3fea831a-227a-46e6-b6f1-a0851eed65b8
-Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid=/subscriptions/cdbe0b43-92a0-4715-838a-f2648cc7ad21/resourcegroups/aml-quickstarts-208099/workspaces/quick-starts-ws-208099&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
+RunId: HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38
+Web View: https://ml.azure.com/runs/HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38?wsid=/subscriptions/48a74bb7-9950-4cc1-9caa-5d50f995cc55/resourcegroups/aml-quickstarts-208238/workspaces/quick-starts-ws-208238&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254
 
 </pre>
 </div>
@@ -14938,30 +14928,30 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;runId&#39;: &#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8&#39;,
+<pre>{&#39;runId&#39;: &#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38&#39;,
  &#39;target&#39;: &#39;StandardD2CPUCluster&#39;,
  &#39;status&#39;: &#39;Completed&#39;,
- &#39;startTimeUtc&#39;: &#39;2022-09-20T21:55:00.624649Z&#39;,
- &#39;endTimeUtc&#39;: &#39;2022-09-20T22:14:14.506004Z&#39;,
+ &#39;startTimeUtc&#39;: &#39;2022-09-21T21:22:16.846221Z&#39;,
+ &#39;endTimeUtc&#39;: &#39;2022-09-21T21:42:33.619703Z&#39;,
  &#39;services&#39;: {},
  &#39;properties&#39;: {&#39;primary_metric_config&#39;: &#39;{&#34;name&#34;:&#34;Accuracy&#34;,&#34;goal&#34;:&#34;maximize&#34;}&#39;,
   &#39;resume_from&#39;: &#39;null&#39;,
   &#39;runTemplate&#39;: &#39;HyperDrive&#39;,
   &#39;azureml.runsource&#39;: &#39;hyperdrive&#39;,
   &#39;platform&#39;: &#39;AML&#39;,
-  &#39;ContentSnapshotId&#39;: &#39;606d047d-3b82-4366-9f4f-f62b9b3bc45a&#39;,
+  &#39;ContentSnapshotId&#39;: &#39;5cf4050b-9c55-4576-be63-404eae912e05&#39;,
   &#39;user_agent&#39;: &#39;python/3.8.5 (Linux-5.15.0-1017-azure-x86_64-with-glibc2.10) msrest/0.7.1 Hyperdrive.Service/1.0.0 Hyperdrive.SDK/core.1.44.0&#39;,
   &#39;space_size&#39;: &#39;infinite_space_size&#39;,
-  &#39;score&#39;: &#39;0.9099295945617868&#39;,
-  &#39;best_child_run_id&#39;: &#39;HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39;,
+  &#39;score&#39;: &#39;0.9102937606215101&#39;,
+  &#39;best_child_run_id&#39;: &#39;HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_17&#39;,
   &#39;best_metric_status&#39;: &#39;Succeeded&#39;,
-  &#39;best_data_container_id&#39;: &#39;dcid.HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4&#39;},
+  &#39;best_data_container_id&#39;: &#39;dcid.HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_17&#39;},
  &#39;inputDatasets&#39;: [],
  &#39;outputDatasets&#39;: [],
  &#39;runDefinition&#39;: {&#39;configuration&#39;: None,
@@ -14970,9 +14960,9 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
    &#39;amlClientModule&#39;: &#39;[Scrubbed]&#39;,
    &#39;amlClientFunction&#39;: &#39;[Scrubbed]&#39;,
    &#39;tenantId&#39;: &#39;660b3398-b80e-49d2-bc5b-ac1dc93b5254&#39;,
-   &#39;amlClientRequestId&#39;: &#39;31829298-e7d9-4a71-8795-f470606ba3e3&#39;,
-   &#39;amlClientSessionId&#39;: &#39;502afa2b-0434-48df-a395-27c95adff4dd&#39;,
-   &#39;subscriptionId&#39;: &#39;cdbe0b43-92a0-4715-838a-f2648cc7ad21&#39;,
+   &#39;amlClientRequestId&#39;: &#39;94c72d25-08e0-4263-99a3-2c0e3473ff8b&#39;,
+   &#39;amlClientSessionId&#39;: &#39;7fc55eb9-7ec4-4d05-b5be-3ec32296f147&#39;,
+   &#39;subscriptionId&#39;: &#39;48a74bb7-9950-4cc1-9caa-5d50f995cc55&#39;,
    &#39;estimator&#39;: &#39;NoneType&#39;,
    &#39;samplingMethod&#39;: &#39;RANDOM&#39;,
    &#39;terminationPolicy&#39;: &#39;Bandit&#39;,
@@ -14981,7 +14971,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
    &#39;maxConcurrentRuns&#39;: 4,
    &#39;maxDurationMinutes&#39;: 10080,
    &#39;vmSize&#39;: None},
-  &#39;snapshotId&#39;: &#39;606d047d-3b82-4366-9f4f-f62b9b3bc45a&#39;,
+  &#39;snapshotId&#39;: &#39;5cf4050b-9c55-4576-be63-404eae912e05&#39;,
   &#39;snapshots&#39;: [],
   &#39;sourceCodeDataReference&#39;: None,
   &#39;parentRunId&#39;: None,
@@ -14992,8 +14982,8 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
   &#39;properties&#39;: {},
   &#39;tags&#39;: {},
   &#39;aggregatedArtifactPath&#39;: None},
- &#39;logFiles&#39;: {&#39;azureml-logs/hyperdrive.txt&#39;: &#39;https://mlstrg208099.blob.core.windows.net/azureml/ExperimentRun/dcid.HD_3fea831a-227a-46e6-b6f1-a0851eed65b8/azureml-logs/hyperdrive.txt?sv=2019-07-07&amp;sr=b&amp;sig=gOvn21CDFlhnVk9hXhSjlsXXdyEJmlghF9JA7hvrK6M%3D&amp;skoid=69a06219-00de-4a45-8618-b3fda439363a&amp;sktid=660b3398-b80e-49d2-bc5b-ac1dc93b5254&amp;skt=2022-09-20T21%3A43%3A52Z&amp;ske=2022-09-22T05%3A53%3A52Z&amp;sks=b&amp;skv=2019-07-07&amp;st=2022-09-20T22%3A04%3A16Z&amp;se=2022-09-21T06%3A14%3A16Z&amp;sp=r&#39;},
- &#39;submittedBy&#39;: &#39;ODL_User 208099&#39;}</pre>
+ &#39;logFiles&#39;: {&#39;azureml-logs/hyperdrive.txt&#39;: &#39;https://mlstrg208238.blob.core.windows.net/azureml/ExperimentRun/dcid.HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38/azureml-logs/hyperdrive.txt?sv=2019-07-07&amp;sr=b&amp;sig=%2FtJJj5DIk1oPqbrq%2BJ8Z6BDu7t0woKyDG8441WnBj6U%3D&amp;skoid=fa71dd9a-ed15-4502-ad77-61c77cea1fdf&amp;sktid=660b3398-b80e-49d2-bc5b-ac1dc93b5254&amp;skt=2022-09-21T21%3A11%3A11Z&amp;ske=2022-09-23T05%3A21%3A11Z&amp;sks=b&amp;skv=2019-07-07&amp;st=2022-09-21T21%3A32%3A58Z&amp;se=2022-09-22T05%3A42%3A58Z&amp;sp=r&#39;},
+ &#39;submittedBy&#39;: &#39;ODL_User 208238&#39;}</pre>
 </div>
 
 </div>
@@ -15007,7 +14997,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
@@ -15039,8 +15029,8 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>HD_3fea831a-227a-46e6-b6f1-a0851eed65b8_4
-{&#39;Regularization Strength:&#39;: 0.6914687720101343, &#39;Max iterations:&#39;: 200, &#39;Accuracy&#39;: 0.9099295945617868}
+<pre>HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38_17
+{&#39;Regularization Strength:&#39;: 0.9054340254976188, &#39;Max iterations:&#39;: 100, &#39;Accuracy&#39;: 0.9102937606215101}
 </pre>
 </div>
 </div>
@@ -15054,7 +15044,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_run</span><span class="o">.</span><span class="n">get_file_names</span><span class="p">()</span> <span class="c1"># DW: Next, identify the file names for the best run</span>
@@ -15075,7 +15065,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -15083,7 +15073,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>[&#39;logs/azureml/dataprep/0/backgroundProcess.log&#39;,
  &#39;logs/azureml/dataprep/0/backgroundProcess_Telemetry.log&#39;,
- &#39;logs/azureml/dataprep/0/rslex.log.2022-09-20-22&#39;,
+ &#39;logs/azureml/dataprep/0/rslex.log.2022-09-21-21&#39;,
  &#39;outputs/model.joblib&#39;,
  &#39;system_logs/cs_capability/cs-capability.log&#39;,
  &#39;system_logs/hosttools_capability/hosttools-capability.log&#39;,
@@ -15105,7 +15095,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Finally, register the model of the best run to save it</span>
@@ -15134,7 +15124,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.data.dataset_factory</span> <span class="kn">import</span> <span class="n">TabularDatasetFactory</span>
@@ -15157,7 +15147,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">train</span> <span class="kn">import</span> <span class="n">clean_data</span>
@@ -15176,7 +15166,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Let's first take a look at the data.</span>
@@ -15198,7 +15188,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15382,7 +15372,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: And now see what the output results look like.</span>
@@ -15404,7 +15394,7 @@ Web View: https://ml.azure.com/runs/HD_3fea831a-227a-46e6-b6f1-a0851eed65b8?wsid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -15452,7 +15442,7 @@ Name: y, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Create a new column in dataframe x to store the target y values.</span>
@@ -15475,7 +15465,7 @@ Name: y, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15670,12 +15660,29 @@ Ref: <a href="https://knowledge.udacity.com/questions/469948">https://knowledge.
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save the Pandas dataframe as a CSV file within the training folder</span>
+<span class="n">x</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'training/bankmarketing-train.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># List the datastores in the workspace</span>
@@ -15704,25 +15711,12 @@ Ref: <a href="https://knowledge.udacity.com/questions/469948">https://knowledge.
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>2022-09-20:23:21:02,228 INFO     [datastore_client.py:991] &lt;azureml.core.authentication.InteractiveLoginAuthentication object at 0x7f7d9e422d00&gt;
-2022-09-20:23:21:02,526 INFO     [datastore_client.py:991] &lt;azureml.core.authentication.InteractiveLoginAuthentication object at 0x7f7d9e422d00&gt;
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>datastore
+workspaceblobstore
 workspaceworkingdirectory
 workspaceartifactstore
 workspacefilestore
-workspaceblobstore
 
 Default datastore:  workspaceblobstore
 </pre>
@@ -15733,26 +15727,34 @@ Default datastore:  workspaceblobstore
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Store the default datastore in a variable</span>
+<span class="n">datastore</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_default_datastore</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Store the default datastore in a variable</span>
-<span class="n">datastore</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_default_datastore</span><span class="p">()</span>
-
-<span class="c1"># Save the Pandas dataframe as a CSV file within the training folder</span>
-<span class="n">x</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'training/bankmarketing-train.csv'</span><span class="p">)</span>
-
-<span class="c1"># Upload the training folder to the datastore</span>
-<span class="n">datastore</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">src_dir</span><span class="o">=</span><span class="s1">'training'</span><span class="p">,</span> <span class="n">target_path</span><span class="o">=</span><span class="s1">'training'</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Create our dataset object for the AutoML run</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">TabularDatasetFactory</span><span class="o">.</span><span class="n">from_delimited_files</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="p">[(</span><span class="n">datastore</span><span class="p">,</span>
-                                                            <span class="p">(</span><span class="s1">'training/bankmarketing-train.csv'</span><span class="p">))])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Upload the training data to the datastore</span>
+<span class="n">datastore</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">src_dir</span><span class="o">=</span><span class="s1">'./training'</span><span class="p">,</span> <span class="n">target_path</span><span class="o">=</span><span class="s1">'bankmarketing'</span><span class="p">,</span>
+                 <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15774,9 +15776,7 @@ Default datastore:  workspaceblobstore
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>2022-09-20:23:48:40,480 INFO     [datastore_client.py:991] &lt;azureml.core.authentication.InteractiveLoginAuthentication object at 0x7f7d9e422d00&gt;
-2022-09-20:23:48:41,128 INFO     [azure_storage_datastore.py:789] Called AzureBlobDatastore.upload
-2022-09-20:23:48:41,142 INFO     [azure_storage_datastore.py:370] Uploading an estimated of 1 files
+<pre>&#34;Datastore.upload&#34; is deprecated after version 1.0.69. Please use &#34;Dataset.File.upload_directory&#34; to upload your files             from a local directory and create FileDataset in single method call. See Dataset API change notice at https://aka.ms/dataset-deprecation.
 </pre>
 </div>
 </div>
@@ -15789,34 +15789,8 @@ Default datastore:  workspaceblobstore
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Uploading an estimated of 1 files
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>2022-09-20:23:48:41,394 INFO     [azure_storage_datastore.py:370] Uploading training/bankmarketing-train.csv
-2022-09-20:23:48:41,395 INFO     [azure_storage_datastore.py:370] Uploaded training/bankmarketing-train.csv, 1 files out of an estimated total of 1
-2022-09-20:23:48:41,396 INFO     [azure_storage_datastore.py:370] Uploaded 1 files
-2022-09-20:23:48:41,397 INFO     [azure_storage_datastore.py:799] Finished AzureBlobDatastore.upload with count=1.
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Uploading training/bankmarketing-train.csv
-Uploaded training/bankmarketing-train.csv, 1 files out of an estimated total of 1
+Uploading ./training/bankmarketing-train.csv
+Uploaded ./training/bankmarketing-train.csv, 1 files out of an estimated total of 1
 Uploaded 1 files
 </pre>
 </div>
@@ -15825,162 +15799,45 @@ Uploaded 1 files
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [63]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 11&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> datastore<span style="color: rgb(98,98,98)">.</span>upload(src_dir<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">training</span><span style="color: rgb(175,0,0)">&#39;</span>, target_path<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">training</span><span style="color: rgb(175,0,0)">&#39;</span>, overwrite<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-<span class="ansi-green-intense-fg ansi-bold">     10</span> <span style="color: rgb(95,135,135)"># Create our dataset object for the AutoML run</span>
-<span class="ansi-green-fg">---&gt; 11</span> dataset <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">TabularDatasetFactory</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">from_delimited_files</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">datastore</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span> <span class="ansi-yellow-bg">                                                            </span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">training/bankmarketing-train.csv</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/data/_loggerfactory.py:132</span>, in <span class="ansi-cyan-fg">track.&lt;locals&gt;.monitor.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    130</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> _LoggerFactory<span style="color: rgb(98,98,98)">.</span>track_activity(logger, func<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__name__</span>, activity_type, custom_dimensions) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> al:
-<span class="ansi-green-intense-fg ansi-bold">    131</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; 132</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    133</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">Exception</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> e:
-<span class="ansi-green-intense-fg ansi-bold">    134</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">hasattr</span>(al, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">activity_info</span><span style="color: rgb(175,0,0)">&#39;</span>) <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span style="color: rgb(0,135,0)">hasattr</span>(e, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">error_code</span><span style="color: rgb(175,0,0)">&#39;</span>):
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/data/dataset_factory.py:357</span>, in <span class="ansi-cyan-fg">TabularDatasetFactory.from_delimited_files</span><span class="ansi-blue-fg">(path, validate, include_path, infer_column_types, set_column_types, separator, header, partition_format, support_multi_line, empty_as_string, encoding)</span>
-<span class="ansi-green-intense-fg ansi-bold">    347</span>     dataflow <span style="color: rgb(98,98,98)">=</span> dataprep()<span style="color: rgb(98,98,98)">.</span>read_csv(path,
-<span class="ansi-green-intense-fg ansi-bold">    348</span>                                    verify_exists<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">False</span>,
-<span class="ansi-green-intense-fg ansi-bold">    349</span>                                    include_path<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    354</span>                                    empty_as_string<span style="color: rgb(98,98,98)">=</span>empty_as_string,
-<span class="ansi-green-intense-fg ansi-bold">    355</span>                                    encoding<span style="color: rgb(98,98,98)">=</span>encoding)
-<span class="ansi-green-intense-fg ansi-bold">    356</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; 357</span>     dataflow <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">dataprep</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">read_csv</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    358</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">verify_exists</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    359</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">include_path</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    360</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">infer_column_types</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">False</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    361</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">separator</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">separator</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    362</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">header</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">header</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    363</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">quoting</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">support_multi_line</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    364</span> <span class="ansi-yellow-bg">                                   </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    366</span> dataflow <span style="color: rgb(98,98,98)">=</span> _transform_and_validate(
-<span class="ansi-green-intense-fg ansi-bold">    367</span>     dataflow, partition_format, include_path,
-<span class="ansi-green-intense-fg ansi-bold">    368</span>     validate,
-<span class="ansi-green-intense-fg ansi-bold">    369</span>     infer_column_types <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _is_inference_required(set_column_types))
-<span class="ansi-green-intense-fg ansi-bold">    370</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> infer_column_types:
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/readers.py:100</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-fg">(path, separator, header, encoding, quoting, inference_arguments, skip_rows, skip_mode, comment, include_path, archive_options, infer_column_types, verify_exists, partition_size, empty_as_string)</span>
-<span class="ansi-green-intense-fg ansi-bold">     63</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">     64</span> <span style="color: rgb(175,0,0)">Creates a new Dataflow with the operations required to read CSV and other delimited text files (TSV, custom delimiters like semicolon, colon etc.).</span>
-<span class="ansi-green-intense-fg ansi-bold">     65</span> 
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span> <span style="color: rgb(175,0,0)">:return: A new Dataflow.</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">     99</span> skip_mode <span style="color: rgb(98,98,98)">=</span> _default_skip_mode(skip_mode, skip_rows)
-<span class="ansi-green-fg">--&gt; 100</span> df <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">Dataflow</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_path_to_get_files_block</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">archive_options</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    101</span> df <span style="color: rgb(98,98,98)">=</span> df<span style="color: rgb(98,98,98)">.</span>parse_delimited(separator, header, encoding, quoting, skip_rows, skip_mode, comment, partition_size, empty_as_string)
-<span class="ansi-green-intense-fg ansi-bold">    103</span> df <span style="color: rgb(98,98,98)">=</span> _handle_type_inference_and_path(df, inference_arguments, infer_column_types, include_path)
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/dataflow.py:2395</span>, in <span class="ansi-cyan-fg">Dataflow._path_to_get_files_block</span><span class="ansi-blue-fg">(path, archive_options)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2393</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-intense-fg ansi-bold">   2394</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> _is_datapath(path) <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> _is_datapaths(path):
-<span class="ansi-green-fg">-&gt; 2395</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">datastore_to_dataflow</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2396</span> <span class="ansi-bold" style="color: rgb(0,135,0)">except</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ImportError</span>:
-<span class="ansi-green-intense-fg ansi-bold">   2397</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">pass</span>
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/_datastore_helper.py:40</span>, in <span class="ansi-cyan-fg">datastore_to_dataflow</span><span class="ansi-blue-fg">(data_source, query_timeout, is_file)</span>
-<span class="ansi-green-intense-fg ansi-bold">     38</span> datastore_values <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-intense-fg ansi-bold">     39</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> source <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> data_source:
-<span class="ansi-green-fg">---&gt; 40</span>     datastore, datastore_value <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">get_datastore_value</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">source</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     41</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> _is_fs_datastore(datastore):
-<span class="ansi-green-intense-fg ansi-bold">     42</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> NotSupportedDatastoreTypeError(datastore)
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/_datastore_helper.py:92</span>, in <span class="ansi-cyan-fg">get_datastore_value</span><span class="ansi-blue-fg">(data_source)</span>
-<span class="ansi-green-intense-fg ansi-bold">     89</span> _ensure_supported(datastore)
-<span class="ansi-green-intense-fg ansi-bold">     91</span> workspace <span style="color: rgb(98,98,98)">=</span> datastore<span style="color: rgb(98,98,98)">.</span>workspace
-<span class="ansi-green-fg">---&gt; 92</span> <span class="ansi-yellow-bg">_set_auth_type</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">workspace</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     93</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> (datastore, DatastoreValue(
-<span class="ansi-green-intense-fg ansi-bold">     94</span>     subscription<span style="color: rgb(98,98,98)">=</span>workspace<span style="color: rgb(98,98,98)">.</span>subscription_id,
-<span class="ansi-green-intense-fg ansi-bold">     95</span>     resource_group<span style="color: rgb(98,98,98)">=</span>workspace<span style="color: rgb(98,98,98)">.</span>resource_group,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span>     path<span style="color: rgb(98,98,98)">=</span>path_on_storage
-<span class="ansi-green-intense-fg ansi-bold">     99</span> ))
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/_datastore_helper.py:185</span>, in <span class="ansi-cyan-fg">_set_auth_type</span><span class="ansi-blue-fg">(workspace)</span>
-<span class="ansi-green-intense-fg ansi-bold">    182</span>     auth_type <span style="color: rgb(98,98,98)">=</span> AuthType<span style="color: rgb(98,98,98)">.</span>DERIVED
-<span class="ansi-green-intense-fg ansi-bold">    184</span> auth_value <span style="color: rgb(98,98,98)">=</span> auth
-<span class="ansi-green-fg">--&gt; 185</span> <span class="ansi-yellow-bg">get_engine_api</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">set_aml_auth</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">SetAmlAuthMessageArgument</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">auth_type</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">json</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">dumps</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">auth_value</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/_aml_helper.py:38</span>, in <span class="ansi-cyan-fg">update_aml_env_vars.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(op_code, message, cancellation_token)</span>
-<span class="ansi-green-intense-fg ansi-bold">     36</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">len</span>(changed) <span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(98,98,98)">0</span>:
-<span class="ansi-green-intense-fg ansi-bold">     37</span>     engine_api_func()<span style="color: rgb(98,98,98)">.</span>update_environment_variable(changed)
-<span class="ansi-green-fg">---&gt; 38</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">send_message_func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">op_code</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">message</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">cancellation_token</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/engineapi/api.py:294</span>, in <span class="ansi-cyan-fg">EngineAPI.set_aml_auth</span><span class="ansi-blue-fg">(self, message_args, cancellation_token)</span>
-<span class="ansi-green-intense-fg ansi-bold">    292</span> <span style="color: rgb(175,0,255)">@update_aml_env_vars</span>(get_engine_api)
-<span class="ansi-green-intense-fg ansi-bold">    293</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">set_aml_auth</span>(<span style="color: rgb(0,135,0)">self</span>, message_args: typedefinitions<span style="color: rgb(98,98,98)">.</span>SetAmlAuthMessageArgument, cancellation_token: CancellationToken <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">--&gt; 294</span>     response <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_message_channel</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">send_message</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">Engine.SetAmlAuth</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">message_args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">cancellation_token</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    295</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> response
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/engineapi/engine.py:247</span>, in <span class="ansi-cyan-fg">MultiThreadMessageChannel.send_message</span><span class="ansi-blue-fg">(self, op_code, message, cancellation_token)</span>
-<span class="ansi-green-intense-fg ansi-bold">    245</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_relaunch_lock:
-<span class="ansi-green-intense-fg ansi-bold">    246</span>         <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_was_relaunched <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">False</span>
-<span class="ansi-green-fg">--&gt; 247</span>         <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_relaunch_callback</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    249</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_last_message_id <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1</span>
-<span class="ansi-green-intense-fg ansi-bold">    250</span> message_id <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_last_message_id
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/engineapi/api.py:99</span>, in <span class="ansi-cyan-fg">EngineAPI.__init__.&lt;locals&gt;.connect_to_requests_channel</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     98</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">connect_to_requests_channel</span>():
-<span class="ansi-green-fg">---&gt; 99</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_engine_server_secret <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">sync_host_secret</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">requests_channel</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">host_secret</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    100</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_engine_server_port <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>sync_host_channel_port(<span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>requests_channel<span style="color: rgb(98,98,98)">.</span>port)
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/_aml_helper.py:38</span>, in <span class="ansi-cyan-fg">update_aml_env_vars.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(op_code, message, cancellation_token)</span>
-<span class="ansi-green-intense-fg ansi-bold">     36</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">len</span>(changed) <span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(98,98,98)">0</span>:
-<span class="ansi-green-intense-fg ansi-bold">     37</span>     engine_api_func()<span style="color: rgb(98,98,98)">.</span>update_environment_variable(changed)
-<span class="ansi-green-fg">---&gt; 38</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">send_message_func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">op_code</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">message</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">cancellation_token</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/engineapi/api.py:309</span>, in <span class="ansi-cyan-fg">EngineAPI.sync_host_secret</span><span class="ansi-blue-fg">(self, message_args, cancellation_token)</span>
-<span class="ansi-green-intense-fg ansi-bold">    307</span> <span style="color: rgb(175,0,255)">@update_aml_env_vars</span>(get_engine_api)
-<span class="ansi-green-intense-fg ansi-bold">    308</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">sync_host_secret</span>(<span style="color: rgb(0,135,0)">self</span>, message_args: <span style="color: rgb(0,135,0)">str</span>, cancellation_token: CancellationToken <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(0,135,0)">str</span>:
-<span class="ansi-green-fg">--&gt; 309</span>     response <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_message_channel</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">send_message</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">Engine.SyncHostSecret</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">message_args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">cancellation_token</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    310</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> response
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/dataprep/api/engineapi/engine.py:271</span>, in <span class="ansi-cyan-fg">MultiThreadMessageChannel.send_message</span><span class="ansi-blue-fg">(self, op_code, message, cancellation_token)</span>
-<span class="ansi-green-intense-fg ansi-bold">    264</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_pending_messages[message_id] <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">event</span><span style="color: rgb(175,0,0)">&#39;</span>: event, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">response</span><span style="color: rgb(175,0,0)">&#39;</span>: <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>}
-<span class="ansi-green-intense-fg ansi-bold">    265</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_write_line(json<span style="color: rgb(98,98,98)">.</span>dumps({
-<span class="ansi-green-intense-fg ansi-bold">    266</span>     <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">messageId</span><span style="color: rgb(175,0,0)">&#39;</span>: message_id,
-<span class="ansi-green-intense-fg ansi-bold">    267</span>     <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">opCode</span><span style="color: rgb(175,0,0)">&#39;</span>: op_code,
-<span class="ansi-green-intense-fg ansi-bold">    268</span>     <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">data</span><span style="color: rgb(175,0,0)">&#39;</span>: message
-<span class="ansi-green-intense-fg ansi-bold">    269</span> }, <span style="color: rgb(0,135,0)">cls</span><span style="color: rgb(98,98,98)">=</span>CustomEncoder))
-<span class="ansi-green-fg">--&gt; 271</span> <span class="ansi-yellow-bg">event</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">wait</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    272</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_messages_lock:
-<span class="ansi-green-intense-fg ansi-bold">    273</span>     message <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_pending_messages<span style="color: rgb(98,98,98)">.</span>pop(message_id, <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>)
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/threading.py:558</span>, in <span class="ansi-cyan-fg">Event.wait</span><span class="ansi-blue-fg">(self, timeout)</span>
-<span class="ansi-green-intense-fg ansi-bold">    556</span> signaled <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_flag
-<span class="ansi-green-intense-fg ansi-bold">    557</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> signaled:
-<span class="ansi-green-fg">--&gt; 558</span>     signaled <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_cond</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">wait</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">timeout</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    559</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> signaled
-
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/threading.py:302</span>, in <span class="ansi-cyan-fg">Condition.wait</span><span class="ansi-blue-fg">(self, timeout)</span>
-<span class="ansi-green-intense-fg ansi-bold">    300</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:    <span style="color: rgb(95,135,135)"># restore state no matter what (e.g., KeyboardInterrupt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> timeout <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-fg">--&gt; 302</span>         <span class="ansi-yellow-bg">waiter</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">acquire</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    303</span>         gotit <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>
-<span class="ansi-green-intense-fg ansi-bold">    304</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>$AZUREML_DATAREFERENCE_e8e2a93251e54141b5344a5730d737a9</pre>
 </div>
 
 </div>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create our dataset object as a tabular data set for access during training on remote compute</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">TabularDatasetFactory</span><span class="o">.</span><span class="n">from_delimited_files</span><span class="p">(</span>
+    <span class="n">path</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="s1">'bankmarketing/bankmarketing-train.csv'</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.train.automl</span> <span class="kn">import</span> <span class="n">AutoMLConfig</span>
@@ -15993,7 +15850,7 @@ File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/threa
     <span class="n">experiment_timeout_minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
     <span class="n">task</span><span class="o">=</span><span class="s1">'classification'</span><span class="p">,</span>
     <span class="n">primary_metric</span><span class="o">=</span><span class="s1">'accuracy'</span><span class="p">,</span>
-    <span class="n">training_data</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span>
+    <span class="n">training_data</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span>
     <span class="n">label_column_name</span><span class="o">=</span><span class="s1">'y'</span><span class="p">,</span>
     <span class="n">n_cross_validations</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
     <span class="n">compute_target</span><span class="o">=</span><span class="n">cpu_cluster</span><span class="p">)</span>
@@ -16004,52 +15861,12 @@ File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/threa
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [61]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">from</span> <span class="ansi-bold" style="color: rgb(0,0,255)">azureml</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">train</span><span class="ansi-bold" style="color: rgb(0,0,255)">.</span><span class="ansi-bold" style="color: rgb(0,0,255)">automl</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> AutoMLConfig
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(95,135,135)"># Set parameters for AutoMLConfig</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span style="color: rgb(95,135,135)"># NOTE: DO NOT CHANGE THE experiment_timeout_minutes PARAMETER OR YOUR INSTANCE WILL TIME OUT.</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span style="color: rgb(95,135,135)"># If you wish to run the experiment longer, you will need to run this notebook in your own</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> <span style="color: rgb(95,135,135)"># Azure tenant, which will incur personal costs.</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> automl_config <span style="color: rgb(98,98,98)">=</span> AutoMLConfig(
-<span class="ansi-green-intense-fg ansi-bold">      8</span>     experiment_timeout_minutes<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">30</span>,
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     task<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">classification</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-intense-fg ansi-bold">     10</span>     primary_metric<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">accuracy</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-fg">---&gt; 11</span>     training_data<span style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">dataset</span>,
-<span class="ansi-green-intense-fg ansi-bold">     12</span>     label_column_name<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">y</span><span style="color: rgb(175,0,0)">&#39;</span>,
-<span class="ansi-green-intense-fg ansi-bold">     13</span>     n_cross_validations<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">5</span>,
-<span class="ansi-green-intense-fg ansi-bold">     14</span>     compute_target<span style="color: rgb(98,98,98)">=</span>cpu_cluster)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;dataset&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Submit your automl run</span>
@@ -16076,68 +15893,102 @@ Input <span class="ansi-green-fg">In [61]</span>, in <span class="ansi-cyan-fg">
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Submitting remote run.
+No run_configuration provided, running on StandardD2CPUCluster with default configuration
+Running on remote compute: StandardD2CPUCluster
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table style="width:100%"><tr><th>Experiment</th><th>Id</th><th>Type</th><th>Status</th><th>Details Page</th><th>Docs Page</th></tr><tr><td>udacity-project</td><td>AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb</td><td>automl</td><td>NotStarted</td><td><a href="https://ml.azure.com/runs/AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb?wsid=/subscriptions/48a74bb7-9950-4cc1-9caa-5d50f995cc55/resourcegroups/aml-quickstarts-208238/workspaces/quick-starts-ws-208238&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254" target="_blank" rel="noopener">Link to Azure Machine Learning studio</a></td><td><a href="https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py" target="_blank" rel="noopener">Link to Documentation</a></td></tr></table>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ConfigException</span>                           Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [33]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 3&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(95,135,135)"># DW: Submit your automl run</span>
-<span class="ansi-green-fg">----&gt; 3</span> automl_run <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">exp</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">submit</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">automl_config</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">show_output</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> automl_run<span style="color: rgb(98,98,98)">.</span>wait_for_completion(show_output<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
+Current status: FeaturesGeneration. Generating features for the dataset.
+Current status: DatasetFeaturization. Beginning to fit featurizers and featurize the dataset.
+Current status: DatasetCrossValidationSplit. Generating individually featurized CV splits.
+Current status: ModelSelection. Beginning model selection.
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/_jupyter_common/__init__.py:86</span>, in <span class="ansi-cyan-fg">_experiment_submit_notebook_decorator.&lt;locals&gt;.submit</span><span class="ansi-blue-fg">(self, config, tags, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     85</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">submit</span>(<span style="color: rgb(0,135,0)">self</span>, config, tags<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, <span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span>kwargs):
-<span class="ansi-green-fg">---&gt; 86</span>     run <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">original_submit</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">config</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">tags</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     87</span>     _update_run_created_from(run)
-<span class="ansi-green-intense-fg ansi-bold">     88</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> run
+********************************************************************************************
+DATA GUARDRAILS: 
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/core/experiment.py:238</span>, in <span class="ansi-cyan-fg">Experiment.submit</span><span class="ansi-blue-fg">(self, config, tags, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    236</span> submit_func <span style="color: rgb(98,98,98)">=</span> get_experiment_submit(config)
-<span class="ansi-green-intense-fg ansi-bold">    237</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_log_context(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">submit config </span><span class="ansi-bold" style="color: rgb(175,95,135)">{}</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(98,98,98)">.</span>format(config<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span><span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__name__</span>)):
-<span class="ansi-green-fg">--&gt; 238</span>     run <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">submit_func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">config</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">workspace</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">name</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    239</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> tags <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-intense-fg ansi-bold">    240</span>     run<span style="color: rgb(98,98,98)">.</span>set_tags(tags)
+TYPE:         Class balancing detection
+STATUS:       ALERTED
+DESCRIPTION:  To decrease model bias, please cancel the current run and fix balancing problem.
+              Learn more about imbalanced data: https://aka.ms/AutomatedMLImbalancedData
+DETAILS:      Imbalanced data can lead to a falsely perceived positive effect of a model&#39;s accuracy because the input data has bias towards one class.
++------------------------------+--------------------------------+--------------------------------------+
+|Size of the smallest class    |Name/Label of the smallest class|Number of samples in the training data|
++==============================+================================+======================================+
+|3692                          |1                               |32950                                 |
++------------------------------+--------------------------------+--------------------------------------+
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/train/automl/automlconfig.py:93</span>, in <span class="ansi-cyan-fg">_automl_static_submit</span><span class="ansi-blue-fg">(automl_config_object, workspace, experiment_name, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     90</span> run_config <span style="color: rgb(98,98,98)">=</span> automl_config_object<span style="color: rgb(98,98,98)">.</span>_run_configuration
-<span class="ansi-green-intense-fg ansi-bold">     91</span> compute_target <span style="color: rgb(98,98,98)">=</span> automl_config_object<span style="color: rgb(98,98,98)">.</span>user_settings<span style="color: rgb(98,98,98)">.</span>get(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">compute_target</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-fg">---&gt; 93</span> <span class="ansi-yellow-bg">automl_config_object</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_validate_config_settings</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">workspace</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     94</span> fit_params <span style="color: rgb(98,98,98)">=</span> automl_config_object<span style="color: rgb(98,98,98)">.</span>_get_fit_params()
-<span class="ansi-green-intense-fg ansi-bold">     96</span> <span style="color: rgb(95,135,135)"># retrieve settings which are present in user but not part of fit_params</span>
+********************************************************************************************
 
-File <span class="ansi-green-fg">/anaconda/envs/azureml_py38/lib/python3.8/site-packages/azureml/train/automl/automlconfig.py:2166</span>, in <span class="ansi-cyan-fg">AutoMLConfig._validate_config_settings</span><span class="ansi-blue-fg">(self, workspace)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2163</span>         input_type <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">str</span>(<span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>user_settings<span style="color: rgb(98,98,98)">.</span>get(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">training_data</span><span style="color: rgb(175,0,0)">&#39;</span>)<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span>)
-<span class="ansi-green-intense-fg ansi-bold">   2164</span>         target <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">training_data</span><span style="color: rgb(175,0,0)">&#34;</span>
-<span class="ansi-green-fg">-&gt; 2166</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> ConfigException<span style="color: rgb(98,98,98)">.</span>_with_error(
-<span class="ansi-green-intense-fg ansi-bold">   2167</span>         AzureMLError<span style="color: rgb(98,98,98)">.</span>create(
-<span class="ansi-green-intense-fg ansi-bold">   2168</span>             InvalidInputDatatype, target<span style="color: rgb(98,98,98)">=</span>target, input_type<span style="color: rgb(98,98,98)">=</span>input_type,
-<span class="ansi-green-intense-fg ansi-bold">   2169</span>             supported_types<span style="color: rgb(98,98,98)">=</span>SupportedInputDatatypes<span style="color: rgb(98,98,98)">.</span>TABULAR_DATASET
-<span class="ansi-green-intense-fg ansi-bold">   2170</span>         )
-<span class="ansi-green-intense-fg ansi-bold">   2171</span>     )
-<span class="ansi-green-intense-fg ansi-bold">   2172</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> workspace <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> compute_target <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-intense-fg ansi-bold">   2173</span>     all_compute_targets <span style="color: rgb(98,98,98)">=</span> workspace<span style="color: rgb(98,98,98)">.</span>compute_targets
+TYPE:         Missing feature values imputation
+STATUS:       PASSED
+DESCRIPTION:  No feature missing values were detected in the training data.
+              Learn more about missing value imputation: https://aka.ms/AutomatedMLFeaturization
 
-<span class="ansi-red-fg">ConfigException</span>: ConfigException:
-	Message: Input of type &#39;&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;&#39; is not supported. Supported types: [azureml.data.tabular_dataset.TabularDataset]Please refer to documentation for converting to Supported types: https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.dataset.dataset?view=azure-ml-py
-	InnerException: None
-	ErrorResponse 
-{
-    &#34;error&#34;: {
-        &#34;code&#34;: &#34;UserError&#34;,
-        &#34;message&#34;: &#34;Input of type &#39;&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;&#39; is not supported. Supported types: [azureml.data.tabular_dataset.TabularDataset]Please refer to documentation for converting to Supported types: https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.dataset.dataset?view=azure-ml-py&#34;,
-        &#34;details_uri&#34;: &#34;https://aka.ms/AutoMLConfig&#34;,
-        &#34;target&#34;: &#34;training_data&#34;,
-        &#34;inner_error&#34;: {
-            &#34;code&#34;: &#34;BadArgument&#34;,
-            &#34;inner_error&#34;: {
-                &#34;code&#34;: &#34;ArgumentInvalid&#34;,
-                &#34;inner_error&#34;: {
-                    &#34;code&#34;: &#34;InvalidInputDatatype&#34;
-                }
-            }
-        }
-    }
-}</pre>
+********************************************************************************************
+
+TYPE:         High cardinality feature detection
+STATUS:       PASSED
+DESCRIPTION:  Your inputs were analyzed, and no high cardinality features were detected.
+              Learn more about high cardinality feature handling: https://aka.ms/AutomatedMLFeaturization
+
+********************************************************************************************
+
+********************************************************************************************
+ITER: The iteration being evaluated.
+PIPELINE: A summary description of the pipeline being evaluated.
+DURATION: Time taken for the current iteration.
+METRIC: The result of computing score on the fitted pipeline.
+BEST: The best observed score thus far.
+********************************************************************************************
+
+ ITER   PIPELINE                                       DURATION            METRIC      BEST
+    0   MaxAbsScaler LightGBM                          0:00:14             0.9142    0.9142
+    1   MaxAbsScaler XGBoostClassifier                 0:00:29             0.9122    0.9142
+    2   MaxAbsScaler ExtremeRandomTrees                0:00:23             0.7293    0.9142
+    3   SparseNormalizer XGBoostClassifier             0:00:25             0.9140    0.9142
+    4   MaxAbsScaler LightGBM                          0:00:12             0.9122    0.9142
+    5   MaxAbsScaler LightGBM                          0:00:11             0.8881    0.9142
+    6   StandardScalerWrapper XGBoostClassifier        0:00:19             0.9092    0.9142
+    7   MaxAbsScaler LogisticRegression                0:00:17             0.9085    0.9142
+    8   StandardScalerWrapper ExtremeRandomTrees       0:00:17             0.8880    0.9142
+    9   StandardScalerWrapper XGBoostClassifier        0:00:18             0.9134    0.9142
+   10   SparseNormalizer LightGBM                      0:00:17             0.9048    0.9142
+   11   StandardScalerWrapper XGBoostClassifier        0:00:18             0.9143    0.9143
+   12   MaxAbsScaler LogisticRegression                0:00:17             0.9085    0.9143
+   13   MaxAbsScaler SGD                               0:00:16             0.8368    0.9143
+   14   StandardScalerWrapper XGBoostClassifier        0:00:20             0.9129    0.9143
+   15   SparseNormalizer RandomForest                  0:00:34             0.8157    0.9143
+   16   StandardScalerWrapper LogisticRegression       0:00:14             0.9086    0.9143
+   17   StandardScalerWrapper RandomForest             0:00:19             0.9009    0.9143
+   18   StandardScalerWrapper XGBoostClassifier        0:00:17             0.9139    0.9143
+   19   TruncatedSVDWrapper RandomForest               0:03:18             0.8152    0.9143
+   20   TruncatedSVDWrapper RandomForest               0:04:51             0.8288    0.9143
+   21   StandardScalerWrapper XGBoostClassifier        0:00:29             0.9144    0.9144
+</pre>
 </div>
 </div>
 
