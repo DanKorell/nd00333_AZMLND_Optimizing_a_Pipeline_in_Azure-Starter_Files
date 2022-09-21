@@ -14579,7 +14579,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Optimizing-a-Pipeline-in-Azure---Daniel-Webb---20th-September-2022">Optimizing a Pipeline in Azure - Daniel Webb - 20th September 2022<a class="anchor-link" href="#Optimizing-a-Pipeline-in-Azure---Daniel-Webb---20th-September-2022">&#182;</a></h2>
+<h2 id="Optimizing-a-Pipeline-in-Azure---Daniel-Webb---21st-September-2022">Optimizing a Pipeline in Azure - Daniel Webb - 21st September 2022<a class="anchor-link" href="#Optimizing-a-Pipeline-in-Azure---Daniel-Webb---21st-September-2022">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15047,7 +15047,8 @@ Web View: https://ml.azure.com/runs/HD_3ffa95d0-2053-4b11-8f34-c2483ad19c38?wsid
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_run</span><span class="o">.</span><span class="n">get_file_names</span><span class="p">()</span> <span class="c1"># DW: Next, identify the file names for the best run</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Next, identify the file names for the best run</span>
+<span class="n">best_run</span><span class="o">.</span><span class="n">get_file_names</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15668,7 +15669,7 @@ Ref: <a href="https://knowledge.udacity.com/questions/469948">https://knowledge.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save the Pandas dataframe as a CSV file within the training folder</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Save the Pandas dataframe as a CSV file within the training folder</span>
 <span class="n">x</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'training/bankmarketing-train.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
@@ -15685,7 +15686,7 @@ Ref: <a href="https://knowledge.udacity.com/questions/469948">https://knowledge.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># List the datastores in the workspace</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: List the datastores in the workspace</span>
 <span class="k">for</span> <span class="n">datastore</span> <span class="ow">in</span> <span class="n">ws</span><span class="o">.</span><span class="n">datastores</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">datastore</span><span class="p">)</span>
 
@@ -15735,7 +15736,7 @@ Default datastore:  workspaceblobstore
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Store the default datastore in a variable</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Store the default datastore in a variable</span>
 <span class="n">datastore</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_default_datastore</span><span class="p">()</span>
 </pre></div>
 
@@ -15752,7 +15753,7 @@ Default datastore:  workspaceblobstore
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Upload the training data to the datastore</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Upload the training data to the datastore</span>
 <span class="n">datastore</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">src_dir</span><span class="o">=</span><span class="s1">'./training'</span><span class="p">,</span> <span class="n">target_path</span><span class="o">=</span><span class="s1">'bankmarketing'</span><span class="p">,</span>
                  <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -15822,7 +15823,7 @@ Uploaded 1 files
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create our dataset object as a tabular data set for access during training on remote compute</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Create our dataset object as a tabular data set for access during training on remote compute</span>
 <span class="n">train_data</span> <span class="o">=</span> <span class="n">TabularDatasetFactory</span><span class="o">.</span><span class="n">from_delimited_files</span><span class="p">(</span>
     <span class="n">path</span><span class="o">=</span><span class="n">datastore</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="s1">'bankmarketing/bankmarketing-train.csv'</span><span class="p">))</span>
 </pre></div>
@@ -15842,7 +15843,7 @@ Uploaded 1 files
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">azureml.train.automl</span> <span class="kn">import</span> <span class="n">AutoMLConfig</span>
 
-<span class="c1"># Set parameters for AutoMLConfig</span>
+<span class="c1"># DW: Set parameters for AutoMLConfig</span>
 <span class="c1"># NOTE: DO NOT CHANGE THE experiment_timeout_minutes PARAMETER OR YOUR INSTANCE WILL TIME OUT.</span>
 <span class="c1"># If you wish to run the experiment longer, you will need to run this notebook in your own</span>
 <span class="c1"># Azure tenant, which will incur personal costs.</span>
@@ -15866,7 +15867,7 @@ Uploaded 1 files
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Submit your automl run</span>
@@ -15988,57 +15989,202 @@ BEST: The best observed score thus far.
    19   TruncatedSVDWrapper RandomForest               0:03:18             0.8152    0.9143
    20   TruncatedSVDWrapper RandomForest               0:04:51             0.8288    0.9143
    21   StandardScalerWrapper XGBoostClassifier        0:00:29             0.9144    0.9144
+   22   MaxAbsScaler LightGBM                          0:00:25             0.8880    0.9144
+   23   MaxAbsScaler LightGBM                          0:00:26             0.9042    0.9144
+   24   MaxAbsScaler LightGBM                          0:00:42             0.9098    0.9144
+   25   StandardScalerWrapper XGBoostClassifier        0:01:07             0.9159    0.9159
+   26   StandardScalerWrapper XGBoostClassifier        0:03:14             0.9094    0.9159
+   27   SparseNormalizer LightGBM                      0:00:26             0.9013    0.9159
+   28   StandardScalerWrapper XGBoostClassifier        0:01:45             0.9077    0.9159
+   29   MaxAbsScaler LightGBM                          0:00:29             0.9101    0.9159
+   30   TruncatedSVDWrapper XGBoostClassifier          0:00:35             0.8880    0.9159
+   31   StandardScalerWrapper XGBoostClassifier        0:02:04             0.9161    0.9161
+   32    VotingEnsemble                                0:01:03             0.9175    0.9175
+   33    StackEnsemble                                 0:01:28             0.9160    0.9175
 </pre>
 </div>
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table style="width:100%"><tr><th>Experiment</th><th>Id</th><th>Type</th><th>Status</th><th>Details Page</th><th>Docs Page</th></tr><tr><td>udacity-project</td><td>AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb</td><td>automl</td><td>Completed</td><td><a href="https://ml.azure.com/runs/AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb?wsid=/subscriptions/48a74bb7-9950-4cc1-9caa-5d50f995cc55/resourcegroups/aml-quickstarts-208238/workspaces/quick-starts-ws-208238&amp;tid=660b3398-b80e-49d2-bc5b-ac1dc93b5254" target="_blank" rel="noopener">Link to Azure Machine Learning studio</a></td><td><a href="https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py" target="_blank" rel="noopener">Link to Documentation</a></td></tr></table>
 </div>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Retrieve and save your best automl model.</span>
+<div class="jp-OutputArea-child">
 
-<span class="n">automl_best_run</span> <span class="o">=</span> <span class="n">automl_run</span><span class="o">.</span><span class="n">get_best_run_by_primary_metric</span><span class="p">()</span> <span class="c1"># The best run based on the primary metric</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">automl_best_run</span><span class="o">.</span><span class="n">get_metrics</span><span class="p">())</span> <span class="c1"># Display the parameters and the primary metric values of the best run</span>
-</pre></div>
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
-     </div>
-</div>
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+********************************************************************************************
+DATA GUARDRAILS: 
+
+TYPE:         Class balancing detection
+STATUS:       ALERTED
+DESCRIPTION:  To decrease model bias, please cancel the current run and fix balancing problem.
+              Learn more about imbalanced data: https://aka.ms/AutomatedMLImbalancedData
+DETAILS:      Imbalanced data can lead to a falsely perceived positive effect of a model&#39;s accuracy because the input data has bias towards one class.
++------------------------------+--------------------------------+--------------------------------------+
+|Size of the smallest class    |Name/Label of the smallest class|Number of samples in the training data|
++==============================+================================+======================================+
+|3692                          |1                               |32950                                 |
++------------------------------+--------------------------------+--------------------------------------+
+
+********************************************************************************************
+
+TYPE:         Missing feature values imputation
+STATUS:       PASSED
+DESCRIPTION:  No feature missing values were detected in the training data.
+              Learn more about missing value imputation: https://aka.ms/AutomatedMLFeaturization
+
+********************************************************************************************
+
+TYPE:         High cardinality feature detection
+STATUS:       PASSED
+DESCRIPTION:  Your inputs were analyzed, and no high cardinality features were detected.
+              Learn more about high cardinality feature handling: https://aka.ms/AutomatedMLFeaturization
+
+********************************************************************************************
+
+********************************************************************************************
+ITER: The iteration being evaluated.
+PIPELINE: A summary description of the pipeline being evaluated.
+DURATION: Time taken for the current iteration.
+METRIC: The result of computing score on the fitted pipeline.
+BEST: The best observed score thus far.
+********************************************************************************************
+
+ ITER   PIPELINE                                       DURATION            METRIC      BEST
+    0   MaxAbsScaler LightGBM                          0:00:14             0.9142    0.9142
+    1   MaxAbsScaler XGBoostClassifier                 0:00:29             0.9122    0.9142
+    2   MaxAbsScaler ExtremeRandomTrees                0:00:23             0.7293    0.9142
+    3   SparseNormalizer XGBoostClassifier             0:00:25             0.9140    0.9142
+    4   MaxAbsScaler LightGBM                          0:00:12             0.9122    0.9142
+    5   MaxAbsScaler LightGBM                          0:00:11             0.8881    0.9142
+    6   StandardScalerWrapper XGBoostClassifier        0:00:19             0.9092    0.9142
+    7   MaxAbsScaler LogisticRegression                0:00:17             0.9085    0.9142
+    8   StandardScalerWrapper ExtremeRandomTrees       0:00:17             0.8880    0.9142
+    9   StandardScalerWrapper XGBoostClassifier        0:00:18             0.9134    0.9142
+   10   SparseNormalizer LightGBM                      0:00:17             0.9048    0.9142
+   11   StandardScalerWrapper XGBoostClassifier        0:00:18             0.9143    0.9143
+   12   MaxAbsScaler LogisticRegression                0:00:17             0.9085    0.9143
+   13   MaxAbsScaler SGD                               0:00:16             0.8368    0.9143
+   14   StandardScalerWrapper XGBoostClassifier        0:00:20             0.9129    0.9143
+   15   SparseNormalizer RandomForest                  0:00:34             0.8157    0.9143
+   16   StandardScalerWrapper LogisticRegression       0:00:14             0.9086    0.9143
+   17   StandardScalerWrapper RandomForest             0:00:19             0.9009    0.9143
+   18   StandardScalerWrapper XGBoostClassifier        0:00:17             0.9139    0.9143
+   19   TruncatedSVDWrapper RandomForest               0:03:18             0.8152    0.9143
+   20   TruncatedSVDWrapper RandomForest               0:04:51             0.8288    0.9143
+   21   StandardScalerWrapper XGBoostClassifier        0:00:29             0.9144    0.9144
+   22   MaxAbsScaler LightGBM                          0:00:25             0.8880    0.9144
+   23   MaxAbsScaler LightGBM                          0:00:26             0.9042    0.9144
+   24   MaxAbsScaler LightGBM                          0:00:42             0.9098    0.9144
+   25   StandardScalerWrapper XGBoostClassifier        0:01:07             0.9159    0.9159
+   26   StandardScalerWrapper XGBoostClassifier        0:03:14             0.9094    0.9159
+   27   SparseNormalizer LightGBM                      0:00:26             0.9013    0.9159
+   28   StandardScalerWrapper XGBoostClassifier        0:01:45             0.9077    0.9159
+   29   MaxAbsScaler LightGBM                          0:00:29             0.9101    0.9159
+   30   TruncatedSVDWrapper XGBoostClassifier          0:00:35             0.8880    0.9159
+   31   StandardScalerWrapper XGBoostClassifier        0:02:04             0.9161    0.9161
+   32    VotingEnsemble                                0:01:03             0.9175    0.9175
+   33    StackEnsemble                                 0:01:28             0.9160    0.9175
+</pre>
 </div>
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;runId&#39;: &#39;AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb&#39;,
+ &#39;target&#39;: &#39;StandardD2CPUCluster&#39;,
+ &#39;status&#39;: &#39;Completed&#39;,
+ &#39;startTimeUtc&#39;: &#39;2022-09-21T22:09:32.17252Z&#39;,
+ &#39;endTimeUtc&#39;: &#39;2022-09-21T22:50:31.005337Z&#39;,
+ &#39;services&#39;: {},
+ &#39;warnings&#39;: [{&#39;source&#39;: &#39;JasmineService&#39;,
+   &#39;message&#39;: &#39;Experiment timeout reached, hence experiment stopped. Current experiment timeout: 0 hour(s) 30 minute(s)&#39;}],
+ &#39;properties&#39;: {&#39;num_iterations&#39;: &#39;1000&#39;,
+  &#39;training_type&#39;: &#39;TrainFull&#39;,
+  &#39;acquisition_function&#39;: &#39;EI&#39;,
+  &#39;primary_metric&#39;: &#39;accuracy&#39;,
+  &#39;train_split&#39;: &#39;0&#39;,
+  &#39;acquisition_parameter&#39;: &#39;0&#39;,
+  &#39;num_cross_validation&#39;: &#39;5&#39;,
+  &#39;target&#39;: &#39;StandardD2CPUCluster&#39;,
+  &#39;AMLSettingsJsonString&#39;: &#39;{&#34;path&#34;:null,&#34;name&#34;:&#34;udacity-project&#34;,&#34;subscription_id&#34;:&#34;48a74bb7-9950-4cc1-9caa-5d50f995cc55&#34;,&#34;resource_group&#34;:&#34;aml-quickstarts-208238&#34;,&#34;workspace_name&#34;:&#34;quick-starts-ws-208238&#34;,&#34;region&#34;:&#34;southcentralus&#34;,&#34;compute_target&#34;:&#34;StandardD2CPUCluster&#34;,&#34;spark_service&#34;:null,&#34;azure_service&#34;:&#34;remote&#34;,&#34;many_models&#34;:false,&#34;pipeline_fetch_max_batch_size&#34;:1,&#34;enable_batch_run&#34;:true,&#34;enable_run_restructure&#34;:false,&#34;start_auxiliary_runs_before_parent_complete&#34;:false,&#34;enable_code_generation&#34;:true,&#34;iterations&#34;:1000,&#34;primary_metric&#34;:&#34;accuracy&#34;,&#34;task_type&#34;:&#34;classification&#34;,&#34;positive_label&#34;:null,&#34;data_script&#34;:null,&#34;test_size&#34;:0.0,&#34;test_include_predictions_only&#34;:false,&#34;validation_size&#34;:0.0,&#34;n_cross_validations&#34;:5,&#34;y_min&#34;:null,&#34;y_max&#34;:null,&#34;num_classes&#34;:null,&#34;featurization&#34;:&#34;auto&#34;,&#34;_ignore_package_version_incompatibilities&#34;:false,&#34;is_timeseries&#34;:false,&#34;max_cores_per_iteration&#34;:1,&#34;max_concurrent_iterations&#34;:1,&#34;iteration_timeout_minutes&#34;:null,&#34;mem_in_mb&#34;:null,&#34;enforce_time_on_windows&#34;:false,&#34;experiment_timeout_minutes&#34;:30,&#34;experiment_exit_score&#34;:null,&#34;partition_column_names&#34;:null,&#34;whitelist_models&#34;:null,&#34;blacklist_algos&#34;:[&#34;TensorFlowLinearClassifier&#34;,&#34;TensorFlowDNN&#34;],&#34;supported_models&#34;:[&#34;SGD&#34;,&#34;SVM&#34;,&#34;ExtremeRandomTrees&#34;,&#34;AveragedPerceptronClassifier&#34;,&#34;GradientBoosting&#34;,&#34;TabnetClassifier&#34;,&#34;MultinomialNaiveBayes&#34;,&#34;LightGBM&#34;,&#34;BernoulliNaiveBayes&#34;,&#34;TensorFlowLinearClassifier&#34;,&#34;KNN&#34;,&#34;RandomForest&#34;,&#34;TensorFlowDNN&#34;,&#34;DecisionTree&#34;,&#34;LogisticRegression&#34;,&#34;XGBoostClassifier&#34;,&#34;LinearSVM&#34;],&#34;private_models&#34;:[],&#34;auto_blacklist&#34;:true,&#34;blacklist_samples_reached&#34;:false,&#34;exclude_nan_labels&#34;:true,&#34;verbosity&#34;:20,&#34;_debug_log&#34;:&#34;azureml_automl.log&#34;,&#34;show_warnings&#34;:false,&#34;model_explainability&#34;:true,&#34;service_url&#34;:null,&#34;sdk_url&#34;:null,&#34;sdk_packages&#34;:null,&#34;enable_onnx_compatible_models&#34;:false,&#34;enable_split_onnx_featurizer_estimator_models&#34;:false,&#34;vm_type&#34;:&#34;STANDARD_D2_V2&#34;,&#34;telemetry_verbosity&#34;:20,&#34;send_telemetry&#34;:true,&#34;enable_dnn&#34;:false,&#34;scenario&#34;:&#34;AutoML&#34;,&#34;environment_label&#34;:null,&#34;save_mlflow&#34;:false,&#34;enable_categorical_indicators&#34;:false,&#34;force_text_dnn&#34;:false,&#34;enable_feature_sweeping&#34;:true,&#34;enable_early_stopping&#34;:true,&#34;early_stopping_n_iters&#34;:10,&#34;arguments&#34;:null,&#34;dataset_id&#34;:&#34;46c7e8ed-d227-4565-8dcb-9f9bcad80887&#34;,&#34;hyperdrive_config&#34;:null,&#34;validation_dataset_id&#34;:null,&#34;run_source&#34;:null,&#34;metrics&#34;:null,&#34;enable_metric_confidence&#34;:false,&#34;enable_ensembling&#34;:true,&#34;enable_stack_ensembling&#34;:true,&#34;ensemble_iterations&#34;:15,&#34;enable_tf&#34;:false,&#34;enable_subsampling&#34;:null,&#34;subsample_seed&#34;:null,&#34;enable_nimbusml&#34;:false,&#34;enable_streaming&#34;:false,&#34;force_streaming&#34;:false,&#34;track_child_runs&#34;:true,&#34;allowed_private_models&#34;:[],&#34;label_column_name&#34;:&#34;y&#34;,&#34;weight_column_name&#34;:null,&#34;cv_split_column_names&#34;:null,&#34;enable_local_managed&#34;:false,&#34;_local_managed_run_id&#34;:null,&#34;cost_mode&#34;:1,&#34;lag_length&#34;:0,&#34;metric_operation&#34;:&#34;maximize&#34;,&#34;preprocess&#34;:true}&#39;,
+  &#39;DataPrepJsonString&#39;: &#39;{\\&#34;training_data\\&#34;: {\\&#34;datasetId\\&#34;: \\&#34;46c7e8ed-d227-4565-8dcb-9f9bcad80887\\&#34;}, \\&#34;datasets\\&#34;: 0}&#39;,
+  &#39;EnableSubsampling&#39;: None,
+  &#39;runTemplate&#39;: &#39;AutoML&#39;,
+  &#39;azureml.runsource&#39;: &#39;automl&#39;,
+  &#39;display_task_type&#39;: &#39;classification&#39;,
+  &#39;dependencies_versions&#39;: &#39;{&#34;azureml-widgets&#34;: &#34;1.44.0&#34;, &#34;azureml-training-tabular&#34;: &#34;1.44.0&#34;, &#34;azureml-train&#34;: &#34;1.44.0&#34;, &#34;azureml-train-restclients-hyperdrive&#34;: &#34;1.44.0&#34;, &#34;azureml-train-core&#34;: &#34;1.44.0&#34;, &#34;azureml-train-automl&#34;: &#34;1.44.0&#34;, &#34;azureml-train-automl-runtime&#34;: &#34;1.44.0&#34;, &#34;azureml-train-automl-client&#34;: &#34;1.44.0&#34;, &#34;azureml-tensorboard&#34;: &#34;1.44.0&#34;, &#34;azureml-telemetry&#34;: &#34;1.44.0&#34;, &#34;azureml-sdk&#34;: &#34;1.44.0&#34;, &#34;azureml-samples&#34;: &#34;0+unknown&#34;, &#34;azureml-responsibleai&#34;: &#34;1.44.0&#34;, &#34;azureml-pipeline&#34;: &#34;1.44.0&#34;, &#34;azureml-pipeline-steps&#34;: &#34;1.44.0&#34;, &#34;azureml-pipeline-core&#34;: &#34;1.44.0&#34;, &#34;azureml-opendatasets&#34;: &#34;1.44.0&#34;, &#34;azureml-mlflow&#34;: &#34;1.44.0&#34;, &#34;azureml-interpret&#34;: &#34;1.44.0&#34;, &#34;azureml-inference-server-http&#34;: &#34;0.7.4&#34;, &#34;azureml-explain-model&#34;: &#34;1.44.0&#34;, &#34;azureml-defaults&#34;: &#34;1.44.0&#34;, &#34;azureml-dataset-runtime&#34;: &#34;1.44.0&#34;, &#34;azureml-dataprep&#34;: &#34;4.2.2&#34;, &#34;azureml-dataprep-rslex&#34;: &#34;2.8.1&#34;, &#34;azureml-dataprep-native&#34;: &#34;38.0.0&#34;, &#34;azureml-datadrift&#34;: &#34;1.44.0&#34;, &#34;azureml-core&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-services&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-server&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-reinforcementlearning&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-pipeline-steps&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-notebook&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-fairness&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-dataset&#34;: &#34;1.44.0&#34;, &#34;azureml-contrib-automl-pipeline-steps&#34;: &#34;1.44.0&#34;, &#34;azureml-cli-common&#34;: &#34;1.44.0&#34;, &#34;azureml-automl-runtime&#34;: &#34;1.44.0&#34;, &#34;azureml-automl-dnn-nlp&#34;: &#34;1.44.0&#34;, &#34;azureml-automl-core&#34;: &#34;1.44.0&#34;, &#34;azureml-accel-models&#34;: &#34;1.44.0&#34;}&#39;,
+  &#39;_aml_system_scenario_identification&#39;: &#39;Remote.Parent&#39;,
+  &#39;ClientType&#39;: &#39;SDK&#39;,
+  &#39;environment_cpu_name&#39;: &#39;AzureML-AutoML&#39;,
+  &#39;environment_cpu_label&#39;: &#39;prod&#39;,
+  &#39;environment_gpu_name&#39;: &#39;AzureML-AutoML-GPU&#39;,
+  &#39;environment_gpu_label&#39;: &#39;prod&#39;,
+  &#39;root_attribution&#39;: &#39;automl&#39;,
+  &#39;attribution&#39;: &#39;AutoML&#39;,
+  &#39;Orchestrator&#39;: &#39;AutoML&#39;,
+  &#39;CancelUri&#39;: &#39;https://southcentralus.api.azureml.ms/jasmine/v1.0/subscriptions/48a74bb7-9950-4cc1-9caa-5d50f995cc55/resourceGroups/aml-quickstarts-208238/providers/Microsoft.MachineLearningServices/workspaces/quick-starts-ws-208238/experimentids/ba99b403-5c35-4090-82bf-7d05bf656f63/cancel/AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb&#39;,
+  &#39;ClientSdkVersion&#39;: &#39;1.44.0&#39;,
+  &#39;snapshotId&#39;: &#39;00000000-0000-0000-0000-000000000000&#39;,
+  &#39;SetupRunId&#39;: &#39;AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb_setup&#39;,
+  &#39;SetupRunContainerId&#39;: &#39;dcid.AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb_setup&#39;,
+  &#39;FeaturizationRunJsonPath&#39;: &#39;featurizer_container.json&#39;,
+  &#39;FeaturizationRunId&#39;: &#39;AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb_featurize&#39;,
+  &#39;ProblemInfoJsonString&#39;: &#39;{&#34;dataset_num_categorical&#34;: 0, &#34;is_sparse&#34;: true, &#34;subsampling&#34;: false, &#34;has_extra_col&#34;: true, &#34;dataset_classes&#34;: 2, &#34;dataset_features&#34;: 122, &#34;dataset_samples&#34;: 32950, &#34;single_frequency_class_detected&#34;: false}&#39;,
+  &#39;ModelExplainRunId&#39;: &#39;AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb_ModelExplain&#39;},
+ &#39;inputDatasets&#39;: [{&#39;dataset&#39;: {&#39;id&#39;: &#39;46c7e8ed-d227-4565-8dcb-9f9bcad80887&#39;}, &#39;consumptionDetails&#39;: {&#39;type&#39;: &#39;RunInput&#39;, &#39;inputName&#39;: &#39;training_data&#39;, &#39;mechanism&#39;: &#39;Direct&#39;}}],
+ &#39;outputDatasets&#39;: [],
+ &#39;logFiles&#39;: {},
+ &#39;submittedBy&#39;: &#39;ODL_User 208238&#39;}</pre>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Tidy-up-resources">Tidy up resources<a class="anchor-link" href="#Tidy-up-resources">&#182;</a></h2>
+
 </div>
+
 </div>
-</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># End the experiment logging that was started in the first code cell</span>
-<span class="n">run</span><span class="o">.</span><span class="n">complete</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Retrieve and save your best automl model.</span>
 
-<span class="c1"># Finally, delete the CPU cluster</span>
-<span class="n">cpu_cluster</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="c1"># DW: First, get the best AutoML run ID and the model details</span>
+<span class="n">best_automl_run</span><span class="p">,</span> <span class="n">best_automl_model</span> <span class="o">=</span> <span class="n">automl_run</span><span class="o">.</span><span class="n">get_output</span><span class="p">()</span>
+
+<span class="c1"># Display these details</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best_automl_run</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best_automl_model</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best_automl_run</span><span class="o">.</span><span class="n">get_metrics</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'accuracy'</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -16060,14 +16206,182 @@ BEST: The best observed score thus far.
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Current provisioning state of AmlCompute is &#34;Deleting&#34;
+<pre>Run(Experiment: udacity-project,
+Id: AutoML_e43e27f3-ae84-4faf-91df-aa84a77d48cb_32,
+Type: azureml.scriptrun,
+Status: Completed)
 
+Pipeline(memory=None,
+         steps=[(&#39;datatransformer&#39;,
+                 DataTransformer(enable_dnn=False, enable_feature_sweeping=True, feature_sweeping_config={}, feature_sweeping_timeout=86400, featurization_config=None, force_text_dnn=False, is_cross_validation=True, is_onnx_compatible=False, observer=None, task=&#39;classification&#39;, working_dir=&#39;/mnt/batch/tasks/shared/LS_root/mount...
+                 PreFittedSoftVotingClassifier(classification_labels=array([0, 1]), estimators=[(&#39;31&#39;, Pipeline(memory=None, steps=[(&#39;standardscalerwrapper&#39;, StandardScalerWrapper(copy=True, with_mean=False, with_std=False)), (&#39;xgboostclassifier&#39;, XGBoostClassifier(booster=&#39;gbtree&#39;, colsample_bylevel=0.6, colsample_bytree=1, eta=0.001, gamma=0, max_depth=6, max_leaves=15, n_estimators=800, n_jobs=1, objective=&#39;reg:logistic&#39;, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=0, reg_alpha=0, reg_lambda=2.5, subsample=1, tree_method=&#39;auto&#39;))], verbose=False)), (&#39;25&#39;, Pipeline(memory=None, steps=[(&#39;standardscalerwrapper&#39;, StandardScalerWrapper(copy=True, with_mean=False, with_std=False)), (&#39;xgboostclassifier&#39;, XGBoostClassifier(booster=&#39;gbtree&#39;, colsample_bytree=1, eta=0.05, gamma=0, max_depth=6, max_leaves=0, n_estimators=200, n_jobs=1, objective=&#39;reg:logistic&#39;, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=0, reg_alpha=0.625, reg_lambda=0.8333333333333334, subsample=0.8, tree_method=&#39;auto&#39;))], verbose=False)), (&#39;21&#39;, Pipeline(memory=None, steps=[(&#39;standardscalerwrapper&#39;, StandardScalerWrapper(copy=True, with_mean=False, with_std=False)), (&#39;xgboostclassifier&#39;, XGBoostClassifier(booster=&#39;gbtree&#39;, colsample_bytree=0.5, eta=0.2, gamma=0, max_depth=7, max_leaves=7, n_estimators=25, n_jobs=1, objective=&#39;reg:logistic&#39;, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=0, reg_alpha=0, reg_lambda=0.20833333333333334, subsample=1, tree_method=&#39;auto&#39;))], verbose=False)), (&#39;11&#39;, Pipeline(memory=None, steps=[(&#39;standardscalerwrapper&#39;, StandardScalerWrapper(copy=True, with_mean=False, with_std=False)), (&#39;xgboostclassifier&#39;, XGBoostClassifier(booster=&#39;gbtree&#39;, colsample_bytree=0.6, eta=0.3, gamma=0, max_depth=6, max_leaves=0, n_estimators=10, n_jobs=1, objective=&#39;reg:logistic&#39;, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=0, reg_alpha=0.3125, reg_lambda=2.3958333333333335, subsample=1, tree_method=&#39;auto&#39;))], verbose=False)), (&#39;0&#39;, Pipeline(memory=None, steps=[(&#39;maxabsscaler&#39;, MaxAbsScaler(copy=True)), (&#39;lightgbmclassifier&#39;, LightGBMClassifier(min_data_in_leaf=20, n_jobs=1, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=None))], verbose=False)), (&#39;3&#39;, Pipeline(memory=None, steps=[(&#39;sparsenormalizer&#39;, Normalizer(copy=True, norm=&#39;l2&#39;)), (&#39;xgboostclassifier&#39;, XGBoostClassifier(booster=&#39;gbtree&#39;, colsample_bytree=0.7, eta=0.01, gamma=0.01, max_depth=7, max_leaves=31, n_estimators=10, n_jobs=1, objective=&#39;reg:logistic&#39;, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=0, reg_alpha=2.1875, reg_lambda=1.0416666666666667, subsample=1, tree_method=&#39;auto&#39;))], verbose=False)), (&#39;24&#39;, Pipeline(memory=None, steps=[(&#39;maxabsscaler&#39;, MaxAbsScaler(copy=True)), (&#39;lightgbmclassifier&#39;, LightGBMClassifier(boosting_type=&#39;gbdt&#39;, colsample_bytree=0.5944444444444444, learning_rate=0.05789894736842106, max_bin=260, max_depth=2, min_child_weight=3, min_data_in_leaf=0.06552068965517242, min_split_gain=0.7894736842105263, n_estimators=800, n_jobs=1, num_leaves=230, problem_info=ProblemInfo(gpu_training_param_dict={&#39;processing_unit_type&#39;: &#39;cpu&#39;}), random_state=None, reg_alpha=0.5263157894736842, reg_lambda=0.7368421052631579, subsample=0.8415789473684211))], verbose=False))], flatten_transform=None, weights=[0.42857142857142855, 0.07142857142857142, 0.07142857142857142, 0.14285714285714285, 0.07142857142857142, 0.14285714285714285, 0.07142857142857142]))],
+         verbose=False)
+
+{&#39;accuracy&#39;: 0.9174506828528074}
 </pre>
 </div>
 </div>
 
 </div>
 
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Next, identify the file names for the best AutoML run</span>
+<span class="n">best_automl_run</span><span class="o">.</span><span class="n">get_file_names</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;accuracy_table&#39;,
+ &#39;automl_driver.py&#39;,
+ &#39;confusion_matrix&#39;,
+ &#39;explanation/63d315b1/classes.interpret.json&#39;,
+ &#39;explanation/63d315b1/expected_values.interpret.json&#39;,
+ &#39;explanation/63d315b1/features.interpret.json&#39;,
+ &#39;explanation/63d315b1/global_names/0.interpret.json&#39;,
+ &#39;explanation/63d315b1/global_rank/0.interpret.json&#39;,
+ &#39;explanation/63d315b1/global_values/0.interpret.json&#39;,
+ &#39;explanation/63d315b1/local_importance_values_sparse.interpret.json&#39;,
+ &#39;explanation/63d315b1/per_class_names/0.interpret.json&#39;,
+ &#39;explanation/63d315b1/per_class_rank/0.interpret.json&#39;,
+ &#39;explanation/63d315b1/per_class_values/0.interpret.json&#39;,
+ &#39;explanation/63d315b1/rich_metadata.interpret.json&#39;,
+ &#39;explanation/63d315b1/true_ys_viz.interpret.json&#39;,
+ &#39;explanation/63d315b1/visualization_dict.interpret.json&#39;,
+ &#39;explanation/63d315b1/ys_pred_proba_viz.interpret.json&#39;,
+ &#39;explanation/63d315b1/ys_pred_viz.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/classes.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/eval_data_viz.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/expected_values.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/features.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/global_names/0.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/global_rank/0.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/global_values/0.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/local_importance_values.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/per_class_names/0.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/per_class_rank/0.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/per_class_values/0.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/rich_metadata.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/true_ys_viz.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/visualization_dict.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/ys_pred_proba_viz.interpret.json&#39;,
+ &#39;explanation/f7d12d6b/ys_pred_viz.interpret.json&#39;,
+ &#39;logs/azureml/azureml_automl.log&#39;,
+ &#39;outputs/conda_env_v_1_0_0.yml&#39;,
+ &#39;outputs/engineered_feature_names.json&#39;,
+ &#39;outputs/env_dependencies.json&#39;,
+ &#39;outputs/featurization_summary.json&#39;,
+ &#39;outputs/generated_code/conda_environment.yaml&#39;,
+ &#39;outputs/generated_code/script.py&#39;,
+ &#39;outputs/generated_code/script_run_notebook.ipynb&#39;,
+ &#39;outputs/internal_cross_validated_models.pkl&#39;,
+ &#39;outputs/model.pkl&#39;,
+ &#39;outputs/pipeline_graph.json&#39;,
+ &#39;outputs/run_id.txt&#39;,
+ &#39;outputs/scoring_file_pbi_v_1_0_0.py&#39;,
+ &#39;outputs/scoring_file_v_1_0_0.py&#39;,
+ &#39;outputs/scoring_file_v_2_0_0.py&#39;,
+ &#39;system_logs/cs_capability/cs-capability.log&#39;,
+ &#39;system_logs/hosttools_capability/hosttools-capability.log&#39;,
+ &#39;system_logs/lifecycler/execution-wrapper.log&#39;,
+ &#39;system_logs/lifecycler/lifecycler.log&#39;,
+ &#39;system_logs/metrics_capability/metrics-capability.log&#39;,
+ &#39;system_logs/snapshot_capability/snapshot-capability.log&#39;,
+ &#39;user_logs/std_log.txt&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DW: Finally, register the model of the best AutoML run to save it</span>
+<span class="n">automl_model</span> <span class="o">=</span> <span class="n">best_automl_run</span><span class="o">.</span><span class="n">register_model</span><span class="p">(</span><span class="n">model_name</span> <span class="o">=</span> <span class="s1">'automl_model'</span><span class="p">,</span>
+                                              <span class="n">model_path</span> <span class="o">=</span> <span class="s1">'outputs/model.pkl'</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The two registered models, named <code>hd_model</code> and <code>automl_model</code>, can be viewed within the Azure ML Studio under the Models tab.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Tidy-up-resources">Tidy up resources<a class="anchor-link" href="#Tidy-up-resources">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># End the experiment logging that was started in the first code cell</span>
+<span class="n">run</span><span class="o">.</span><span class="n">complete</span><span class="p">()</span>
+
+<span class="c1"># Finally, delete the CPU cluster</span>
+<span class="n">cpu_cluster</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
