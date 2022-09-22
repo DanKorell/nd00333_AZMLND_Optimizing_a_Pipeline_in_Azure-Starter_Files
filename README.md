@@ -22,7 +22,7 @@ Two machine learning solutions were developed. The first being a Scikit-learn lo
 The Scikit-learn pipeline was provided by Udacity for this project via the train.py script.
 
 With the bank marketing CSV file identified by its URL, this was loaded into a tabular dataset and run through a cleaning and one-hot encoding process as follows:
-- rows with missing values dropped
+- rows with missing values dropped (though as it happens, none were removed as the cleaned dataset still had 32950 rows, so there were no missing values)
 - the `job`, `education` and `contact` columns one-hot encoded
 - the `marital`, `default`, `housing` and `loan` columns encoded numerically with positive values being encoded as 1
 - the `month` and `day_of_week` columns being encoded as numerical values as per the dictionaries defined in the script
@@ -60,11 +60,18 @@ hyperdrive_config = HyperDriveConfig(run_config=src,
 This used the parameter sampling and early stopping policy I defined, with the primary metric being "Accuracy" and the goal being to maximize it. It was set to run for a maximum of 20 runs, with up to 4 runs taking place at any one time.
 
 #### Parameter sampler
-The parameter sampler chosen was `RandomParameterSampling`, which chooses parameter values from a set of discrete values or from a distribution over a continuous range. As shown above in the pipeline architecture, there were two hyperparameters (`C` and `max_iter`) used for the Scikit-learn Logistic Regression model. As the default number of iterations for this model is 100, I chose four discrete values around this default, from 50 to 200. For the `C` hyperparameter, the inverse of the regularization strength, this must be a positive float, with smaller values specifying a stronger regularization. Because of this, I set this hyperparameter to be chosen from a uniform distribution between 0.001 and 1, so any value within this range could be chosen without any bias.
+The parameter sampler chosen was `RandomParameterSampling`, which chooses parameter values from a set of discrete values or from a distribution over a continuous range.
+
+As shown above in the pipeline architecture, there were two hyperparameters (`C` and `max_iter`) used for the Scikit-learn Logistic Regression model. As the default number of iterations for this model is 100, I chose four discrete values around this default, from 50 to 200. For the `C` hyperparameter, the inverse of the regularization strength, this must be a positive float, with smaller values specifying a stronger regularization. Because of this, I set this hyperparameter to be chosen from a uniform distribution between 0.001 and 1, so any value within this range could be chosen without any bias.
 
 https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 
-**What are the benefits of the early stopping policy you chose?**
+#### Early stopping policy
+The early stopping policy that I implemented was a Bandit policy. This is based on slack factor/slack amount and evaluation interval, so it early terminates any runs where the primary metric is not within the specified slack factor/slack amount with respect to the best performing training run.
+
+https://learn.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.banditpolicy?view=azure-ml-py
+
+I set this Bandit policy with an evaluation interval of 2 and a slack factor of 0.1, meaning that after every two iterations it would check to see if it needs to terminate that job early, and if at the point of checking that particular model's accuracy+10% is below the current best model's accuracy, it will then terminate that job. This saves compute resources from being wasted on jobs that are already underperforming.
 
 ## AutoML
 AutoML allows us to run many different machine learning models without needing to create new pipelines for each one, and to then pick the best performing model automatically. The parameters that I used in setting up the AutoML run were as follows:
