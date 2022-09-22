@@ -92,11 +92,14 @@ The best AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM 
 `XGBoostClassifier(booster='gbtree', colsample_bylevel=0.6, colsample_bytree=1, eta=0.001, gamma=0, max_depth=6, max_leaves=15, n_estimators=800, n_jobs=1, objective='reg:logistic', problem_info=ProblemInfo(gpu_training_param_dict={'processing_unit_type': 'cpu'}), random_state=0, reg_alpha=0, reg_lambda=2.5, subsample=1, tree_method='auto')`
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**  
 Best Hyperdrive model: Scikit-learn Logistic Regression, `C` = 0.9054340254976188, `max_iter` = 100, `Accuracy` = 0.9102937606215101  
 Best AutoML model: Voting Ensemble, `accuracy` = 0.9174506828528074
 
+Both of these resulted in a similar accuracy value, but AutoML was ever so slightly higher. This is possibly due to how AutoML was able to utilize a variety of machine learning models, whilst the Hyperdrive run was limited to the Scikit-learn Logistic Regression with just the two hyperparameters to vary.
 
+In terms of differences in their architectures, with the Hyperdrive run the train.py script split the data into training and testing sets and fitted the Logistic Regression model using the training set, but with the AutoML run this training and testing split was not carried out explicitly, and instead was carried out by using 5-fold cross-validation (`n_cross_validations=5` within the `automl_config`). This means that there were five different trainings, each training using 4/5 of the data, and each validation using 1/5 of the data with a different holdout fold each time.
+
+https://learn.microsoft.com/en-us/azure/machine-learning/how-to-configure-cross-validation-data-splits
 
 ## Future work
 As part of the AutoML run, it carries out some Data Guardrails. One of these guardrails resulted in an alert, highlighting an imbalance in the data. Of the two classes in the data, 29258 had a class of 0 whilst only 3692 had a class of 1. This is just 11% being class 1, meaning that there is a lot of bias towards class 0 within the dataset, and even if our prediction just picked class 0 every time, that itself would reach an accuracy of 89% for our dataset. Because of this, a possible improvement for future experiments would be to address this imbalance in the data. For instance, capturing more cases for class 1, or using some method to resample the data. Alternatively, using a different metric to measure the performance of the model, such as Weighted AUC or F1-Score, may be a better measure to use.
