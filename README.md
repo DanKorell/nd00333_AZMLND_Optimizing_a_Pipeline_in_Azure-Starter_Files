@@ -1,6 +1,5 @@
 # Optimizing an ML Pipeline in Azure
-## Daniel Webb
-### 22nd September 2022
+### Daniel Webb - 22nd September 2022
 
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
