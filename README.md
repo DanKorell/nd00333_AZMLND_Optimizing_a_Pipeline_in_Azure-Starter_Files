@@ -34,7 +34,6 @@ The `x` and `y` dataframes were then split into training and testing sets and th
 Finally, the script then saved the model to the outputs folder.
 
 The Hyperdrive configuration that I used to carry out the various runs of the experiment for various hyperparameter values was as follows:
-
 ```
 ps = RandomParameterSampling({
     "--C": uniform(0.001, 1), # Inverse of regularization strength
@@ -58,7 +57,6 @@ hyperdrive_config = HyperDriveConfig(run_config=src,
                                      max_total_runs=20,
                                      max_concurrent_runs=4)
 ```
-
 This used the parameter sampling and early stopping policy I defined, with the primary metric being accuracy and the goal being to maximize it. It was set to run for a maximum of 20 runs, with up to 4 runs taking place at any one time.
 
 **What are the benefits of the parameter sampler you chose?**
@@ -67,7 +65,6 @@ This used the parameter sampling and early stopping policy I defined, with the p
 
 ## AutoML
 AutoML allows us to run many different machine learning models without needing to create new pipelines for each one, and to then pick the best performing model automatically. The parameters that I used in setting up the AutoML run were as follows:
-
 ```
 automl_config = AutoMLConfig(
     experiment_timeout_minutes=30,
@@ -78,7 +75,6 @@ automl_config = AutoMLConfig(
     n_cross_validations=5,
     compute_target=cpu_cluster)
 ```
-
 This set up AutoML to use classification models (but not utilizing Deep Learning), with accuracy as the primary metric to align with what was done in the Hyperdrive run.
 
 The best AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM classifiers. The highest weighted of these being estimator 31, an XGBoost classifier, with a weight of 0.429. The parameters of this were:
