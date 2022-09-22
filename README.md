@@ -73,7 +73,7 @@ The early stopping policy that I implemented was a Bandit policy. This is based 
 
 https://learn.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive.banditpolicy?view=azure-ml-py
 
-I set this Bandit policy with an evaluation interval of 2 and a slack factor of 0.1, meaning that after every two iterations it would check to see if it needs to terminate that job early, and if at the point of checking that particular model's accuracy+10% is below the current best model's accuracy, it will then terminate that job. This saves compute resources from being wasted on jobs that are already underperforming.
+I set this Bandit policy with an evaluation interval of 2 and a slack factor of 0.1, meaning that after every two iterations it would check to see if it needs to terminate that job early, and if that particular model's accuracy+10% is below the current best model's accuracy, it will then terminate that job. This saves compute resources from being wasted on jobs that are already underperforming.
 
 ## AutoML
 AutoML allows us to run many different machine learning models without needing to create new pipelines for each one, and to then pick the best performing model automatically. The parameters that I used in setting up the AutoML run were as follows:
