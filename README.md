@@ -93,6 +93,10 @@ The best AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM 
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+Best Hyperdrive model: Scikit-learn Logistic Regression, `C` = 0.9054340254976188, `max_iter` = 100, `Accuracy` = 0.9102937606215101  
+Best AutoML model: Voting Ensemble, `accuracy` = 0.9174506828528074
+
+
 
 ## Future work
 As part of the AutoML run, it carries out some Data Guardrails. One of these guardrails resulted in an alert, highlighting an imbalance in the data. Of the two classes in the data, 29258 had a class of 0 whilst only 3692 had a class of 1. This is just 11% being class 1, meaning that there is a lot of bias towards class 0 within the dataset, and even if our prediction just picked class 0 every time, that itself would reach an accuracy of 89% for our dataset. Because of this, a possible improvement for future experiments would be to address this imbalance in the data. For instance, capturing more cases for class 1, or using some method to resample the data. Alternatively, using a different metric to measure the performance of the model, such as Weighted AUC or F1-Score, may be a better measure to use.
