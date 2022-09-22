@@ -18,7 +18,48 @@ This dataset contains data about bank marketing, with a CSV file containing deta
 Two machine learning solutions were developed. The first being a Scikit-learn logistic regression model, for which Hyperdrive was used in the Azure ML SDK to run it multiple times with different values for the two hyperparameters (C: inverse of regularization strength, max_iter: the maximum number of iterations to converge). The second being an AutoML solution running in the Azure ML SDK. With accuracy used as the primary metric, the best Hyperdrive run resulted in 91.029% accuracy, whilst the best AutoML model resulted in 91.745% accuracy. This AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM classifiers.
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+**Pipeline architecture**
+The Scikit-learn pipeline was provided by Udacity for this project via the train.py script.
+
+With the bank marketing CSV file identified by its URL, this was loaded into a tabular dataset and run through a cleaning and one-hot encoding process as follows:
+- rows with missing values dropped
+- the `job`, `education` and `contact` columns one-hot encoded
+- the `marital`, `default`, `housing` and `loan` columns encoded numerically with positive values being encoded as 1
+- the `month` and `day_of_week` columns being encoded as numerical values as per the dictionaries defined in the script
+- the `poutcome` column being encoded as a 1 for values of "success" and 0 otherwise
+- the `y` column being split out into a separate dataframe and encoded as 1 for the "yes" values, 0 otherwise
+
+The `x` and `y` dataframes were then split into training and testing sets and the Scikit-learn Logistic Regression model fitted to the training data with the accuracy score calculated. This Logistic Regression model took parameters of `C` and `max_iter` (described above in the summary).
+
+Finally, the script then saved the model to the outputs folder.
+
+The Hyperdrive configuration that I used to carry out the various runs of the experiment for various hyperparameter values was as follows:
+
+```
+ps = RandomParameterSampling({
+    "--C": uniform(0.001, 1), # Inverse of regularization strength
+    "--max_iter": choice(50, 100, 150, 200) # Maximum number of iterations to converge
+    })
+
+policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
+
+sklearn_env = Environment.from_conda_specification(name='sklearn-env', file_path='conda_dependencies.yml')
+
+src = ScriptRunConfig(source_directory='.',
+                      script='train.py',
+                      compute_target=cpu_cluster,
+                      environment=sklearn_env)
+
+hyperdrive_config = HyperDriveConfig(run_config=src,
+                                     hyperparameter_sampling=ps,
+                                     policy=policy,
+                                     primary_metric_name='Accuracy',
+                                     primary_metric_goal=PrimaryMetricGoal.MAXIMIZE,
+                                     max_total_runs=20,
+                                     max_concurrent_runs=4)
+```
+
+This used the parameter sampling and early stopping policy I defined, with the primary metric being accuracy and the goal being to maximize it. It was set to run for a maximum of 20 runs, with up to 4 runs taking place at any one time.
 
 **What are the benefits of the parameter sampler you chose?**
 
@@ -38,7 +79,7 @@ automl_config = AutoMLConfig(
     compute_target=cpu_cluster)
 ```
 
-This set up a classification model (but not utilizing Deep Learning), with accuracy as the primary metric, to align with what was done in the Hyperdrive run.
+This set up AutoML to use classification models (but not utilizing Deep Learning), with accuracy as the primary metric to align with what was done in the Hyperdrive run.
 
 The best AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM classifiers. The highest weighted of these being estimator 31, an XGBoost classifier, with a weight of 0.429. The parameters of this were:
 
