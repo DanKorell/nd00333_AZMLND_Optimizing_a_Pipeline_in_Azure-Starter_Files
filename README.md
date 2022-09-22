@@ -59,7 +59,7 @@ hyperdrive_config = HyperDriveConfig(run_config=src,
 ```
 This used the parameter sampling and early stopping policy I defined, with the primary metric being "Accuracy" and the goal being to maximize it. It was set to run for a maximum of 20 runs, with up to 4 runs taking place at any one time.
 
-**Parameter sampler**
+#### Parameter sampler
 The parameter sampler chosen was `RandomParameterSampling`, which chooses parameter values from a set of discrete values or from a distribution over a continuous range. As shown above in the pipeline architecture, there were two hyperparameters (`C` and `max_iter`) used for the Scikit-learn Logistic Regression model. As the default number of iterations for this model is 100, I chose four discrete values around this default, from 50 to 200. For the `C` hyperparameter, the inverse of the regularization strength, this must be a positive float, with smaller values specifying a stronger regularization. Because of this, I set this hyperparameter to be chosen from a uniform distribution between 0.001 and 1, so any value within this range could be chosen without any bias.
 
 https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
