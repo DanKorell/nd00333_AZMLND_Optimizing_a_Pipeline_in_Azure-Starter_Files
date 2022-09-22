@@ -92,7 +92,7 @@ The best AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM 
 `XGBoostClassifier(booster='gbtree', colsample_bylevel=0.6, colsample_bytree=1, eta=0.001, gamma=0, max_depth=6, max_leaves=15, n_estimators=800, n_jobs=1, objective='reg:logistic', problem_info=ProblemInfo(gpu_training_param_dict={'processing_unit_type': 'cpu'}), random_state=0, reg_alpha=0, reg_lambda=2.5, subsample=1, tree_method='auto')`
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**  
 Best Hyperdrive model: Scikit-learn Logistic Regression, `C` = 0.9054340254976188, `max_iter` = 100, `Accuracy` = 0.9102937606215101  
 Best AutoML model: Voting Ensemble, `accuracy` = 0.9174506828528074
 
