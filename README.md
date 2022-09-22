@@ -18,7 +18,7 @@ This dataset contains data about bank marketing, with a CSV file containing deta
 Two machine learning solutions were developed. The first being a Scikit-learn logistic regression model, for which Hyperdrive was used in the Azure ML SDK to run it multiple times with different values for the two hyperparameters (C: inverse of regularization strength, max_iter: the maximum number of iterations to converge). The second being an AutoML solution running in the Azure ML SDK. With accuracy used as the primary metric, the best Hyperdrive run resulted in 91.029% accuracy, whilst the best AutoML model resulted in 91.745% accuracy. This AutoML model was a Voting Ensemble, consisting of XGBoost and LightGBM classifiers.
 
 ## Scikit-learn Pipeline
-**Pipeline architecture**
+### Pipeline architecture
 The Scikit-learn pipeline was provided by Udacity for this project via the train.py script.
 
 With the bank marketing CSV file identified by its URL, this was loaded into a tabular dataset and run through a cleaning and one-hot encoding process as follows:
