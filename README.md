@@ -62,6 +62,8 @@ hyperdrive_config = HyperDriveConfig(run_config=src,
 ```
 This used the parameter sampling and early stopping policy I defined, with the primary metric being "Accuracy" and the goal being to maximize it. It was set to run for a maximum of 20 runs, with up to 4 runs taking place at any one time.
 
+![alt text](https://github.com/DanKorell/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/master/Hyperdrive Pipeline.png?raw=true)
+
 #### Parameter sampler
 The parameter sampler chosen was `RandomParameterSampling`, which chooses parameter values from a set of discrete values or from a distribution over a continuous range.
 
